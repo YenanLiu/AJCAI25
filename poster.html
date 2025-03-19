@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJCAI 2025 - Call for Papers</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 1290px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        .header-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+            transform: scale(1.1);
+        }
+
+        .title-overlay {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 15px;
+            width: 480px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .title-overlay h1 {
+            color: #51247a;
+            margin: 0;
+            font-size: 44px;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        .title-overlay h2 {
+            color: #333;
+            border: none;
+            font-size: 20px;
+            margin: 5px 0;
+            padding: 0;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        .title-overlay p {
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .title-overlay .date {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        /* 内容容器 */
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            background: linear-gradient(to bottom, #fff, #f1f1f1);
+        }
+
+        .section {
+            margin-bottom: 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            padding-bottom: 8px;
+            color: #51247a;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        /* 时间线区域 */
+        .timeline {
+            background: linear-gradient(135deg, #d4af37, #51247a);
+            color: white;
+            padding: 10px 15px;
+            margin: -15px -15px 12px;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .timeline h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            margin-right: 8px;
+            color: #fff;
+        }
+
+        .venue-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f8f8f8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .venue-image {
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #d4af37;
+        }
+
+        .venue-highlight {
+            flex: 1;
+            font-size: 15px;
+        }
+
+        .venue-highlight strong {
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* 投稿区域 */
+        .tracks-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .track-item {
+            background: linear-gradient(to bottom, #f8f8f8, #fff);
+            padding: 12px;
+            border-radius: 8px;
+            border-top: 3px solid #d4af37;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .track-item h3 {
+            color: #51247a;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .track-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .track-description {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 6px;
+        }
+
+        .track-description p {
+            font-size: 14px;
+            margin: 0;
+            color: #444;
+        }
+
+        .track-item ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .track-item li {
+            margin-bottom: 3px;
+        }
+
+        /* 加粗文本 */
+        .bold-text {
+            font-weight: 700;
+            color: #333;
+        }
+
+        .publication-info {
+            display: inline-block;
+            background: #f1f1f1;
+            padding: 6px 12px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            border-left: 3px solid #d4af37;
+        }
+
+        /* 主题区域 */
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(to bottom, #f8f8f8, #fff);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .topic-list li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #444;
+            font-weight: normal;
+        }
+
+        .topic-list .bold-text {
+            font-weight: normal;
+        }
+
+        .topic-list li::before {
+            content: "•";
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 16px;
+        }
+
+        /* 二维码区域 */
+        .qr-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            padding: 12px;
+            background: linear-gradient(to right, #f8f8f8, #fff);
+            border-radius: 8px;
+            border: 1px solid #eee;
+            border-left: 3px solid #d4af37;
+        }
+
+        .qr-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 5px;
+            border: 2px solid #d4af37;
+            background: white;
+            padding: 5px;
+        }
+
+        .qr-text {
+            flex: 1;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .qr-text strong {
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .tracks-section {
+                grid-template-columns: 1fr;
+            }
+
+            .topics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            .qr-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .venue-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container"><img src="./imgs/Canberra.jpg" alt="AJCAI 2025 Banner" class="header-image">
+        <div class="title-overlay">
+            <h1>AJCAI</h1>
+            <h2>Australasian Joint Conference on Artificial Intelligence</h2>
+            <h1>2025</h1>
+            <p>Canberra,
+                Australia</p>
+            <p class="date">1<sup>st </sup>Dec - 5<sup>th </sup>Dec,
+                2025</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="timeline">
+                <h3>Important Dates</h3>
+                <div class="timeline-grid">
+                    <div class="timeline-item"><span class="timeline-date">Sep 15,
+                            2025</span><span><strong>Paper Submission</strong></span></div>
+                    <div class="timeline-item"><span class="timeline-date">Oct 15,
+                            2025</span><span>Author Notification</span></div>
+                    <div class="timeline-item"><span class="timeline-date">Oct 30,
+                            2025</span><span>Camera Ready</span></div>
+                    <div class="timeline-item"><span class="timeline-date">Dec 1-5,
+                            2025</span><span><strong>Main Conference</strong></span></div>
+                </div>
+            </div>
+            <div class="venue-container"><img src="./imgs/Parliament_House.jpg" alt="Parliament House"
+                    class="venue-image">
+                <div class="venue-highlight"><strong>Venue: </strong> <span class="bold-text">Parliament House,
+                        Canberra</span> - The iconic heart of Australian democracy,
+                    offering a unique blend of political significance and architectural grandeur for our AI discussions.
+                </div>
+            </div>
+            <h2>Call For Submissions</h2>
+            <div class="tracks-section">
+                <div class="track-item">
+                    <h3>Main Conference Track</h3>
+                    <div class="track-content">
+                        <div class="track-description">
+                            <p>Submit your research papers (max 12 pages) in AI and related fields. <strong
+                                    style="color: #51247a;">All accepted papers will be published in <em>Springer
+                                        LNAI</em> series and indexed by <em>EI</em>.</strong></p>
+                        </div>
+                        <ul>
+                            <li>Technical Papers</li>
+                            <li>Industry Presentations</li>
+                            <li>Keynote Speeches</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="track-item">
+                    <h3>Workshops & Tutorials</h3>
+                    <div class="track-content">
+                        <div class="track-description">
+                            <p>Propose half/full-day workshops or tutorials on emerging AI topics. Share your expertise
+                                with the community.</p>
+                        </div>
+                        <ul>
+                            <li>Half/Full-day Workshops</li>
+                            <li>Interactive Tutorials</li>
+                            <li>Special Sessions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="track-item">
+                    <h3>PhD Forum</h3>
+                    <div class="track-content">
+                        <div class="track-description">
+                            <p>PhD students are invited to present their research in poster format and receive feedback
+                                from senior researchers.</p>
+                        </div>
+                        <ul>
+                            <li>Poster Presentations</li>
+                            <li>Mentoring Sessions</li>
+                            <li>Networking Events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Focus Areas</h2>
+            <div class="topics">
+                <ul class="topic-list">
+                    <li><span class="bold-text">Foundation Models & AIGC</span></li>
+                    <li>3D Vision & Computer Vision</li>
+                    <li><span class="bold-text">Quantum Machine Learning</span></li>
+                    <li>Deep Learning & Neural Networks</li>
+                    <li>Natural Language Processing</li>
+                    <li>Robotics & Automation</li>
+                </ul>
+                <ul class="topic-list">
+                    <li>Agent-based Systems</li>
+                    <li>Knowledge Representation</li>
+                    <li>Machine Learning & Data Mining</li>
+                    <li>Explainable AI & Trust</li>
+                    <li>AI Ethics & Fairness</li>
+                    <li>Human-Robot Interaction</li>
+                </ul>
+                <ul class="topic-list">
+                    <li>Information Retrieval</li>
+                    <li>Cognitive Modelling</li>
+                    <li>Evolutionary Computation</li>
+                    <li>Fuzzy Systems</li>
+                    <li>AI for Social Good</li>
+                    <li>Industry Applications</li>
+                </ul>
+            </div>
+        </div>
+        <div class="qr-section"> <img src="./imgs/qrcode_ajcai2025.org.png" alt="AJCAI 2025 QR Code" class="qr-image">
+            <div class="qr-text"> <strong>Scan for More Information</strong><br> Visit our website for complete
+                conference details, submission guidelines, and registration information.</div>
+        </div>
+    </div>
+</body>
+
+</html>
