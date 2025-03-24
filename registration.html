@@ -1,283 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charSet="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"/>
 
-    <link rel = "stylesheet" type = 'text/css' href = './css/sub_common.css'/>
-    <link rel = "icon" sizes ="32x32" href = './imgs/favicons/favicon-32x32.png' />
-    <link rel = "icon" sizes ="192x192" href = './imgs/favicons/favicon-192x192.png' />
-    <link rel = "apple-touch-icon" sizes ="180x180" href = './imgs/favicons/favicon-180x180.png' />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
 
-    <meta name="generator" content="Gatsby 4.3.0"/>
-    <noscript>
-      <style>
-        .gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}
-      </style>
-    </noscript>
-    <script type="module">
-      const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;
-      e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);
-    </script>
-    <meta name="theme-color" content="#51247a"/>
-    <script type = "text/javascript" src = './js/common.js'></script>
-    
-    <script type="text/javascript">
-      window.onload=function(){
-        changeMobileMenu('registration');
+  <link rel="stylesheet" type='text/css' href='./css/sub_common.css' />
+  <link rel="icon" sizes="32x32" href='./imgs/favicons/favicon-32x32.png' />
+  <link rel="icon" sizes="192x192" href='./imgs/favicons/favicon-192x192.png' />
+  <link rel="apple-touch-icon" sizes="180x180" href='./imgs/favicons/favicon-180x180.png' />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <meta name="generator" content="Gatsby 4.3.0" />
+  <noscript>
+    <style>
+      .gatsby-image-wrapper noscript [data-main-image] {
+        opacity: 1 !important
       }
-    </script>
 
-    <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
-  </head> 
-  <body>
-    <div id="___gatsby">
-      <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
-        <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
-          <header>
+      .gatsby-image-wrapper [data-placeholder-image] {
+        opacity: 0 !important
+      }
+    </style>
+  </noscript>
+  <script type="module">
+    const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
+    e && document.body.addEventListener("load", (function (e) { if (void 0 === e.target.dataset.mainImage) return; if (void 0 === e.target.dataset.gatsbyImageSsr) return; const t = e.target; let a = null, n = t; for (; null === a && n;)void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode), n = n.parentNode; const o = a.querySelector("[data-placeholder-image]"), r = new Image; r.src = t.currentSrc, r.decode().catch((() => { })).then((() => { t.style.opacity = 1, o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear") })) }), !0);
+  </script>
+  <meta name="theme-color" content="#51247a" />
+  <script type="text/javascript" src='./js/common.js'></script>
 
-<!-- Nav Bar -->
-          <iframe id = 'menu' src = './top_menu.html' frameborder = '0' width = '100%' height = '64px' scrolling = 'auto' style = 'z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
-<!-- End Of Nav Bar -->
+  <script type="text/javascript">
+    window.onload = function () {
+      changeMobileMenu('registration');
+    }
+  </script>
 
-          </header>
-          <div class="w-full h-16">
+  <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
+</head>
+
+<body>
+  <div id="___gatsby">
+    <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+      <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
+        <header>
+
+          <!-- Nav Bar -->
+          <iframe id='menu' src='./top_menu.html' frameborder='0' width='100%' height='64px' scrolling='auto'
+            style='z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
+          <!-- End Of Nav Bar -->
+
+        </header>
+        <div class="w-full h-16">
+        </div>
+        <main class="w-full">
+          <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
+            <header class="px-0 sm:px-7">
+
+              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Registration Options </h2>
+
+              <p class="mb-4 text-center font-bold">TBD</p>
+
+              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Registration Pricing </h2>
+              <p class="mb-4 text-center font-bold">TBD</p>
+
+              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold"> Registration notes </h2>
+              <p class="mb-4 text-center font-bold">TBD</p>
+
+              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Registration Options </h2>
+              <p class="mb-4 text-center font-bold">TBD</p>
+
+            </header>
           </div>
-          <main class="w-full">
-            <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
-              <header class="px-0 sm:px-7">
-                
-                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Registration Options </h2>
-                <p class="mb-4">
-                  There are 10 registration options.
-                  <ul style = 'list-style: inside;'>
-                    <li>
-                      <span class = 'j_topics_table_font'>    Full registration is either option 1 or option 2.  Each accepted paper must have a separate full registration by one of the authors (i.e. option 1 or option 2).
-                      </span>                      
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font'>        Options 3 and 4 are for attendees who are attending all 5 days.  The  difference from options 1 and 2 is that the student registration amount is reduced.  These options for suitable for student attendees who don’t need to count their registration as a full registration. 
-                      </span>                      
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font'>            Options 5, 6 and 7 are suitable for attendees only attending the conference on Monday or Tuesday.
-                      </span>                      
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font'>                Option 8 is suitable for attendees only attending the 3 day main conference and who don’t need to count their registration as a full registration.    
-                      </span>                      
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font'>               Option 9 is suitable for attendees only attending for industry day. 
-                      </span>                      
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font'>                 Option 10 is suitable for attendees who wish to purchase an additional conference dinner ticket  
-                      </span>                      
-                    </li>   
-                  </ul>
-
-                  Option 1(full registration): All 5 days, attending track A on Tuesday <br />
-
-                  Option 2(full registration): All 5 days, attending track B on Tuesday  <br />
-
-                  Option 3(regular registration): All 5 days, attending track A on Tuesday <br />
-                  
-                  Option 4(regular registration): All 5 days, attending track B on Tuesday <br />
-
-                  Option 5: Monday only (workshops and tutorials) <br />
-
-                  Option 6: Tuesday track A only  (Encore event and PhD forum) <br />
-                  
-                  Option 7: Tuesday Track B only (DAIRNET symposium) <br />
-
-                  Option 8: Wednesday-Friday only (Main conference) <br />
-
-                  Option 9: Thursday only (Industry day) <br />
-
-                  Option 10: Additional conference dinner ticket <br />
-                  
-                </p>
-                <p class="mb-4">
-                  Note: Options 1, 2, 3, 4, 8  include a conference dinner ticket (for Thursday) as part of registration.  Options 5, 6, 7 and 9 do not include a conference dinner ticket.   
-                </p>
-
-                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Registration Pricing </h2>
-                <p class="mb-4">
-                 The Table of registration pricing is below.  All prices are in Australian dollars and include GST. 
-                </p>
-                <table cellpadding = '5' style = "border-collapse: collapse;">
-                  <tbody>
-                    <tr class = 'j_price_table_title_row'>
-                      <td class = 'j_price_table_column_1' style = 'border-right: 1px solid white;'><b>&nbsp;&nbsp;</b></td>
-                      <td class = '' style = 'text-align: center; border-right: 1px solid white;' colspan="2">Non-student</td>
-                      <td class = '' style = 'text-align: center;' colspan="2">Student</td>
-                    </tr>
-                    
-                    <tr class = 'j_price_table_title_row'>
-                      <td class = 'j_price_table_column_1' style = 'border-right: 1px solid white;'><b>&nbsp;&nbsp;</b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>Early Registration*</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center; border-right: 1px solid white;'>Late or Onsite</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>Early Registration*</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>Late or Onsite</td>
-                    </tr>
-
-                    <tr class = 'j_price_table_content_row'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 1 
-                          (Full registration) </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$999</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1050</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$999</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1050</td>
-                    </tr>
-
-                    
-                    <tr class = 'j_price_table_content_row_1'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 2 
-(Full registration+DAIRNET)  </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1199</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1250</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1199</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1250</td>
-                    </tr>
-
-              
-
-                    <tr class = 'j_price_table_content_row'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 3 (Regular registration)  </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$999</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1050</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$699</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$750</td>
-                    </tr>
-
-                    <tr class = 'j_price_table_content_row_1'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 4 (regular registration+DAIRNET)   </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1199</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$1250</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$750</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$830</td>
-                    </tr>
-                    
-                    <tr class = 'j_price_table_content_row'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 5 (Workshop and tutorial only)   </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$165</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$165</td>
-                    </tr>
-
-                     <tr class = 'j_price_table_content_row_1'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 6 (Encore event and PhD forum only)    </b></td>
-                     <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$165</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$165</td>
-                     </tr>
-
-                    <tr class = 'j_price_table_content_row'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 7 (DAIRNET symposium only)   </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                    </tr>
-                    <tr class = 'j_price_table_content_row_1'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 8 (3 day conference only)     </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$750</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$799</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$599</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$680</td>
-                    </tr>
-                     <tr class = 'j_price_table_content_row'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 9 (industry day only)    </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275 </td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275 </td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$275 </td>
-                    </tr>
-  <tr class = 'j_price_table_content_row_1'>
-                      <td class = 'j_price_table_column_1 j_price_table_row_height'><b>&nbsp;&nbsp;Option 10 (extra conference dinner ticket)     </b></td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$175</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$175</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$175</td>
-                      <td class = 'j_price_table_columns' style = 'text-align: center;'>A$175</td>
-                    </tr>
-                   
-                    
-                  </tbody>
-                </table>
-                <p class="mb-4">
-                  * Early registration is<br>
-                  <ul style = 'list-style: inside;'>
-                    <li>
-                      <span class = 'j_topics_table_font'>     	5 October 2025 for option 1 and option 2,
-                      </span>                      
-                    </li>
-                     <li>
-                      <span class = 'j_topics_table_font'>     31 October 2025 for options 3, 4 and 8 (non student),
-                      </span>                      
-                     </li>
-                      <li>
-                      <span class = 'j_topics_table_font'>     	31 October 2025 for options 3, 4 and 8 (student), 
-                      </span>                      
-                      </li>
-                       <li>
-                      <span class = 'j_topics_table_font'>     	All prices are in Australian Dollars and include GST.
-                      </span>                      
-                    </li>
-                  </ul>
-                </p>
-                
-                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold"> Registration notes </h2>
-
-                Need to update.
-
-              
-
-                <p class="mb-4">
-                  A student is defined as a holder of a student identification card from a recognised tertiary or secondary educational institution or international student card. Students must be currently enrolled in part or full time
-                </p>
-                <p class="mb-4">
-                  The registration confirmation and tax invoice will be automatically emailed to the delegate upon successful registration. If you have any issues getting the tax invoice, please reach out to Farhana Choudhury at <a href="mailto:farhana.choudhury@unimelb.edu.au" style = 'text-decoration: underline; color: blue; cursor: pointer;'>farhana.choudhury@unimelb.edu.au</a> for assistance. 
-                </p>
-
-                <p class="mb-4">
-                  For the invitation letter requests, delegates need to contact Feng Liu directly by emailing <a href="mailto:feng.liu1@unimelb.edu.au" style = 'text-decoration: underline; color: blue; cursor: pointer;'>feng.liu1@unimelb.edu.au</a>. The specific requirements for the visa will vary depending on the delegate's home country. <br /> <br />
- 
-1. Subclass 601 Electronic Travel Authority  <br />
-2. Subclass 651 eVisitor  <br />
-3. Subclass 600 Business Visitor stream  <br />
-4. Explore your travel and visa options <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-finder"  style = 'text-decoration: underline; color: blue; cursor: pointer;' target="_blank" rel="noreferrer">here</a>.  <br />
-
-   <br />
-
-All cancellations must be made in writing to Farhana Choudhury at <a href="mailto:farhana.choudhury@unimelb.edu.au" style = 'text-decoration: underline; color: blue; cursor: pointer;'>farhana.choudhury@unimelb.edu.au</a>. If cancellation is not received in writing, the registration will not be cancelled and a refund (if applicable) will not be processed.  <br /> <br />
- 
-1. Cancellations received on or before 20 November 2025 will incur a 50% cancellation fee.  <br />
-2. Cancellations received on or after 20 November 2025 are non-refundable, however transfer of registration to another attendee is acceptable.  <br />
-                  3. All refunds processed incur a $27.50 processing fee. Refunds cannot be made on credit card merchant fees charged at the time of the booking. <br />
-                  
-                </p>
-
-                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Registration Options </h2>
-                <p class="mb-4">
-                  Please visit the following link to make your registration payment 
-<a href="https://ecommerce.unimelb.edu.au/ajcai-2025-registration"  style = 'text-decoration: underline; color: blue; cursor: pointer;' target="_blank" rel="noreferrer">https://ecommerce.unimelb.edu.au/ajcai-2025-registration</a>.
-                </p>
-
-                
-              </header>
-            </div>
-          </main>
-          <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
-            <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
-              <div class="flex flex-col py-2 px-6 lg:px-0">
-                <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
+        </main>
+        <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
+          <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
+            <div class="flex flex-col py-2 px-6 lg:px-0">
+              <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
                   <div>
                     <p class="mb-5 font-semibold font-headingStyle tracking-semiWide">Silver Sponsors</p>
                     <div class="flex flex-wrap gap-x-12">
@@ -301,7 +105,7 @@ All cancellations must be made in writing to Farhana Choudhury at <a href="mailt
                     </div>
                   </div>
                 </div> -->
-                <!-- <div class="mb-4 md:mb-6">
+              <!-- <div class="mb-4 md:mb-6">
                   <p class="mb-3 font-semibold font-headingStyle tracking-semiWide">Supported by</p>
                   <div class="flex flex-wrap items-center gap-x-12">
                     <a style="width:150px" class="mb-5 lg:mb-0 flex items-center" href="https://www.acm.org/" target="_blank" rel="noreferrer">
@@ -312,56 +116,57 @@ All cancellations must be made in writing to Farhana Choudhury at <a href="mailt
                     </a>
                   </div>
                 </div> -->
-              </div>
-              <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
-                <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra, Australia</small>
-                <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
-              </div>
-              <!-- <div>
+            </div>
+            <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+              <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra,
+                Australia</small>
+              <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
+            </div>
+            <!-- <div>
                 <small>Image credit: <a href="https://commons.wikimedia.org/wiki/File:Brisbane_Sign_and_Skyline_of_Brisbane_CBD,_Queensland_in_Feb_2020.jpg">Kgbo</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</small>
               </div> -->
-              <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+            <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
                 <small class = "j_extra_pt">Website built by: <a href="https://github.com/JesseYang0528" style = "text-decoration: underline;">Hao Yang (Jesse Yang)</a>, <a href="https://github.com/bybeye" style = "text-decoration: underline;">Yingbin Bai (Edward Bai)</a></small>
               </div> -->
-            </div>
-          </footer>
-        </div>
-      </div>
-      <div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true">
+          </div>
+        </footer>
       </div>
     </div>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
-    </script>
-    <script>      
-          if(true) {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer && window.dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <div id="gatsby-announcer"
+      style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
+      aria-live="assertive" aria-atomic="true">
+    </div>
+  </div>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
+  </script>
+  <script>
+    if (true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer && window.dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-            gtag('config', 'G-XSX58G49PD', {"send_page_view":false});
-          }
-    </script>
-    <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/";/*]]>*/</script>
-    <script id="gatsby-chunk-mapping">
-    /*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-1c9788fca0f90abb50c3.js"],"app":["/app-a59b4b6740a68aeefd26.js"],"component---src-pages-404-js":["/component---src-pages-404-js-3d51b459a80f969a4f66.js"],"component---src-pages-gather-town-js":["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"],"component---src-pages-index-js":["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"],"component---src-pages-organisation-js":["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"],"component---src-pages-phd-school-js":["/component---src-pages-phd-school-js-342a122469920c419385.js"],"component---src-pages-program-at-a-glance-js":["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"],"component---src-pages-program-js":["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"],"component---src-pages-sponsors-js":["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"],"component---src-templates-article-js":["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"]};/*]]>*/
-    </script>
-    <script>
-      function show_mobile_nav()
-      {
-        var current_class = document.getElementById('mobile_menu').className;
-        if (current_class == 'hidden')
-        {
-          document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
-          document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
-          document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
-        }
-        else
-        {
-          document.getElementById('mobile_menu').setAttribute('class', 'hidden');
-          document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
-          document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
-        }
+      gtag('config', 'G-XSX58G49PD', { "send_page_view": false });
+    }
+  </script>
+  <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/";/*]]>*/</script>
+  <script id="gatsby-chunk-mapping">
+    /*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-1c9788fca0f90abb50c3.js"], "app": ["/app-a59b4b6740a68aeefd26.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-3d51b459a80f969a4f66.js"], "component---src-pages-gather-town-js": ["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"], "component---src-pages-organisation-js": ["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"], "component---src-pages-phd-school-js": ["/component---src-pages-phd-school-js-342a122469920c419385.js"], "component---src-pages-program-at-a-glance-js": ["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"], "component---src-pages-program-js": ["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"], "component---src-pages-sponsors-js": ["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"], "component---src-templates-article-js": ["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"] };/*]]>*/
+  </script>
+  <script>
+    function show_mobile_nav() {
+      var current_class = document.getElementById('mobile_menu').className;
+      if (current_class == 'hidden') {
+        document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
+        document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
+        document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
       }
-    </script>
-  </body>
+      else {
+        document.getElementById('mobile_menu').setAttribute('class', 'hidden');
+        document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
+        document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
+      }
+    }
+  </script>
+</body>
+
 </html>
