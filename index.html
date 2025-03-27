@@ -1,90 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charSet="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"/>
 
-    <link rel = "stylesheet" type = 'text/css' href = './css/sub_common.css'/>
-    <link rel = "icon" sizes ="32x32" href = './imgs/favicons/favicon-32x32.png' />
-    <link rel = "icon" sizes ="192x192" href = './imgs/favicons/favicon-192x192.png' />
-    <link rel = "apple-touch-icon" sizes ="180x180" href = './imgs/favicons/favicon-180x180.png' />
-    
-    <meta name="generator" content="Gatsby 4.3.0"/>
-    <noscript>
-      <style>
-        .gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}
-      </style>
-    </noscript>
-    <script type="module">
-      const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;
-      e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);
-    </script>
-    <meta name="theme-color" content="#51247a"/>
-    <script type = "text/javascript" src = './js/common.js'></script>
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
 
-    <script type="text/javascript">
-      window.onload=function(){
-        changeMobileMenu('home');
+  <link rel="stylesheet" type='text/css' href='./css/sub_common.css' />
+  <link rel="icon" sizes="32x32" href='./imgs/favicons/favicon-32x32.png' />
+  <link rel="icon" sizes="192x192" href='./imgs/favicons/favicon-192x192.png' />
+  <link rel="apple-touch-icon" sizes="180x180" href='./imgs/favicons/favicon-180x180.png' />
+
+  <meta name="generator" content="Gatsby 4.3.0" />
+  <noscript>
+    <style>
+      .gatsby-image-wrapper noscript [data-main-image] {
+        opacity: 1 !important
       }
-    </script>
 
-    <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
-  </head>
-  <body>
-    <div id="___gatsby">
-      <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
-        <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
+      .gatsby-image-wrapper [data-placeholder-image] {
+        opacity: 0 !important
+      }
+    </style>
+  </noscript>
+  <script type="module">
+    const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
+    e && document.body.addEventListener("load", (function (e) { if (void 0 === e.target.dataset.mainImage) return; if (void 0 === e.target.dataset.gatsbyImageSsr) return; const t = e.target; let a = null, n = t; for (; null === a && n;)void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode), n = n.parentNode; const o = a.querySelector("[data-placeholder-image]"), r = new Image; r.src = t.currentSrc, r.decode().catch((() => { })).then((() => { t.style.opacity = 1, o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear") })) }), !0);
+  </script>
+  <meta name="theme-color" content="#51247a" />
+  <script type="text/javascript" src='./js/common.js'></script>
 
-<!-- Nav Bar -->
-        <iframe id = 'menu' src = './top_menu.html' frameborder = '0' width = '100%' height = '64px' scrolling = 'auto' style = 'z-index: 999; position: fixed;' onmouseover = "extentIframe()" onmouseleave="resetIframe()"></iframe>
-<!-- End Of Nav Bar -->
+  <script type="text/javascript">
+    window.onload = function () {
+      changeMobileMenu('home');
+      // 初始化轮播图
+      initSlideshow();
+    }
 
-          <div class="w-full h-16">
-          </div>
-          <main class="w-full">
-            <div>
-              <div class="hidden md:block" style="position:relative;min-height:min(calc(100vw * 9 / 16), 100vh);max-height:100vh;overflow:hidden">
-                <div data-gatsby-image-wrapper="" style="position:absolute;z-index:-2;top:50%;left:50%;transform:translate(-50%, -50%);min-width:100%;min-height:100%;width:auto;height:auto" class="gatsby-image-wrapper">
-                  <div aria-hidden="true" style="padding-top:56.25%">
-                  </div>
-                  <img aria-hidden="true" data-placeholder-image="" style="opacity:1; transition:opacity 500ms linear" src="./imgs/Canberra.jpg" alt="Southbank skyline"/>
-                </div>
-                <div class="pl-11 pr-4 py-8 rounded-b-xl shadow-lg w-87" style="position:absolute;top:0%;right:20%;background-color:rgba(236, 231, 241, 0.85)">
-                  <h1 class="mb-2 relative font_titleFont text-black font-extrabold tracking-wide text-titleBig leading-titleBig"><span class="text-mainPurple">AJCAI</span><br/><span style = 'font-size: 37px;'>Australasian Joint Conference on Artificial Intelligence</span><br/>2025</h1>
+    // 轮播图功能
+    let slideIndex = 1;
+    let isAnimating = false; // 防止动画进行中多次点击
+    let autoPlayTimer = null; // 自动播放计时器
+
+    const slideshowImages = [
+      './imgs/Canberra.jpg',
+      './imgs/canberra2.avif',
+      './imgs/canberra.jpg'
+    ];
+
+    function initSlideshow() {
+      // 初始化显示第一张幻灯片
+      showSlides(slideIndex);
+
+      // 添加左右箭头点击事件
+      document.querySelector('.prev').addEventListener('click', function () {
+        plusSlides(-1);
+        // 点击时重置自动播放计时器
+        resetAutoPlay();
+      });
+
+      document.querySelector('.next').addEventListener('click', function () {
+        plusSlides(1);
+        // 点击时重置自动播放计时器
+        resetAutoPlay();
+      });
+
+      // 添加圆点点击事件，重置自动播放计时器
+      const dots = document.getElementsByClassName("dot");
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function () {
+          currentSlide(i + 1);
+          resetAutoPlay();
+        });
+      }
+
+      // 添加键盘左右键事件
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowLeft') {
+          plusSlides(-1);
+          resetAutoPlay();
+        } else if (event.key === 'ArrowRight') {
+          plusSlides(1);
+          resetAutoPlay();
+        }
+      });
+
+      // 启动自动播放
+      startAutoPlay();
+    }
+
+    // 自动播放功能
+    function startAutoPlay() {
+      autoPlayTimer = setInterval(function () {
+        plusSlides(1);
+      }, 7000); // 每7秒自动切换一次
+    }
+
+    // 重置自动播放计时器
+    function resetAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+      }
+      startAutoPlay();
+    }
+
+    // 切换幻灯片
+    function plusSlides(n) {
+      if (isAnimating) return; // 如果正在动画，忽略操作
+      showSlides(slideIndex += n);
+    }
+
+    // 跳转到指定幻灯片
+    function currentSlide(n) {
+      if (isAnimating) return; // 如果正在动画，忽略操作
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      const slides = document.getElementsByClassName("slide");
+      const dots = document.getElementsByClassName("dot");
+
+      if (slides.length === 0) return; // 防止DOM还未加载完成
+
+      // 处理幻灯片超出范围
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+
+      // 设置动画标志
+      isAnimating = true;
+
+      // 先将所有幻灯片隐藏
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = 0;
+        slides[i].style.zIndex = 0;
+      }
+
+      // 将当前幻灯片显示出来
+      slides[slideIndex - 1].style.zIndex = 1;
+      setTimeout(() => {
+        slides[slideIndex - 1].style.opacity = 1;
+      }, 50); // 短暂延迟以确保过渡效果平滑
+
+      // 移除所有点的激活状态
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      // 激活当前点
+      dots[slideIndex - 1].className += " active";
+
+      // 动画完成后重置标志
+      setTimeout(() => {
+        isAnimating = false;
+      }, 700); // 与CSS过渡时间相同
+    }
+  </script>
+
+  <style>
+    /* 轮播图容器 */
+    .slideshow-container {
+      position: relative;
+      min-height: min(calc(100vw * 10 / 16), 90vh);
+      /* 增加高度比例 */
+      max-height: 100vh;
+      /* 调整最大高度 */
+      overflow: hidden;
+      margin: 0;
+      width: 100%;
+      /* 横向填满 */
+      max-width: 100%;
+      /* 移除宽度限制 */
+      border-radius: 0;
+      /* 移除圆角 */
+      box-shadow: none;
+      /* 移除阴影 */
+    }
+
+    /* 单个幻灯片 */
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.7s ease-in-out;
+      z-index: 0;
+    }
+
+    /* 幻灯片图片 */
+    .slide img {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      /* 确保横向填满 */
+      height: auto;
+      object-fit: cover;
+      /* 确保图片覆盖整个区域 */
+    }
+
+    /* 前后按钮 */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
+
+    /* 下一个按钮位置 */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* 鼠标悬停在按钮上时的效果 */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* 分页指示器容器 */
+    .dots-container {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 1;
+    }
+
+    /* 分页指示器点 */
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    /* 激活状态的点 */
+    .active,
+    .dot:hover {
+      background-color: white;
+    }
+
+    /* 会议信息banner */
+    .info-banner {
+      position: absolute;
+      top: 0;
+      right: 15%;
+      background-color: rgba(236, 231, 241, 0.85);
+      z-index: 1;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      max-width: 500px;
+      /* 限制最大宽度 */
+    }
+
+    @media (max-width: 768px) {
+      .info-banner {
+        right: 5%;
+        max-width: 90%;
+      }
+    }
+  </style>
+
+  <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
+</head>
+
+<body>
+  <div id="___gatsby">
+    <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+      <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
+
+        <!-- Nav Bar -->
+        <iframe id='menu' src='./top_menu.html' frameborder='0' width='100%' height='64px' scrolling='auto'
+          style='z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
+        <!-- End Of Nav Bar -->
+
+        <div class="w-full h-16">
+        </div>
+        <main class="w-full">
+          <div>
+            <div class="hidden md:block slideshow-container">
+              <!-- 左右箭头 -->
+              <a class="prev">&#10094;</a>
+              <a class="next">&#10095;</a>
+
+              <!-- 轮播幻灯片 -->
+              <div class="slide">
+                <img src="./imgs/Canberra.jpg" alt="Canberra scenery" />
+              </div>
+
+              <div class="slide">
+                <img src="./imgs/canberra2.avif" alt="Canberra scenery" />
+              </div>
+
+              <div class="slide">
+                <img src="./imgs/canberra.jpg" alt="Canberra scenery" />
+              </div>
+
+              <!-- 分页指示器 -->
+              <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+
+              <!-- 会议信息banner，保持位置不变但样式更新 -->
+              <div class="pl-11 pr-4 py-8 rounded-b-xl shadow-lg w-87 info-banner">
+                <h1
+                  class="mb-2 relative font_titleFont text-black font-extrabold tracking-wide text-titleBig leading-titleBig">
+                  <span class="text-mainPurple">AJCAI</span><br /><span style='font-size: 37px;'>Australasian Joint
+                    Conference on Artificial Intelligence</span><br />2025
+                </h1>
+                <p class="mb-4 font-semibold text-titleSmall">Canberra, Australia</p>
+                <p class="mb-1 font-bold text-mainPurple text-titleMedium tracking-semiWide" style='font-size: 20px;'>
+                  1<sup>st</sup> Dec - 5<sup>th</sup> Dec, 2025</p>
+                <!-- <a title="Learn More.." class="font-semibold text-titleSmall hover:underline text-mainPurple" href="#welcome">Learn More.</a> -->
+              </div>
+            </div>
+            <div class='md:hidden'>
+              <div class='global-wrapper pt-9 bg-purple-50'>
+                <div class='flex flex-col items-center'>
+                  <h1
+                    class="mb-2 w-87 relative font-titleFont text-black font-extrabold tracking-wide text-titleBig leading-titleBig text-center"
+                    style="width: 21rem;">
+                    <span class="text-mainPurple">AJCAI</span> <br />Australasian Joint Conference on Artificial
+                    Intelligence<br />2025
+                  </h1>
                   <p class="mb-4 font-semibold text-titleSmall">Canberra, Australia</p>
-                  <p class="mb-1 font-bold text-mainPurple text-titleMedium tracking-semiWide" style = 'font-size: 20px;'>1<sup>st</sup> Dec - 5<sup>th</sup> Dec, 2025</p>
-                  <!-- <a title="Learn More.." class="font-semibold text-titleSmall hover:underline text-mainPurple" href="#welcome">Learn More.</a> -->
+                  <p class="mb-1 font-bold text-mainPurple text-titleMedium tracking-semiWide" style='font-size: 20px;'>
+                    1<sup>st</sup> Dec - 5<sup>th</sup> Dec, 2025</p>
+                  <div class="flex space-x-2 mb-7 h-7"></div>
                 </div>
               </div>
-              <div class = 'md:hidden'>
-                <div class = 'global-wrapper pt-9 bg-purple-50'>
-                  <div class = 'flex flex-col items-center'>
-                    <h1 class="mb-2 w-87 relative font-titleFont text-black font-extrabold tracking-wide text-titleBig leading-titleBig text-center" style = "width: 21rem;">
-                    <span class="text-mainPurple">AJCAI</span> <br />Australasian Joint Conference on Artificial Intelligence<br />2025</h1>
-                    <p class="mb-4 font-semibold text-titleSmall">Canberra, Australia</p>
-                    <p class="mb-1 font-bold text-mainPurple text-titleMedium tracking-semiWide" style = 'font-size: 20px;'>1<sup>st</sup> Dec - 5<sup>th</sup> Dec, 2025</p>
-                    <div class="flex space-x-2 mb-7 h-7"></div>
-                  </div>
-                </div>
-                <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained h-50 m-0 w-full top-0 left-0">
-                  <div style="max-width:1920px;display:block">
-                    <img alt="" role="presentation" aria-hidden="true" src="./imgs/Canberra.jpg" style="max-width:100%;display:block;position:static" />
-                  </div>
+              <div data-gatsby-image-wrapper=""
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained h-50 m-0 w-full top-0 left-0">
+                <div style="max-width:1920px;display:block">
+                  <img alt="" role="presentation" aria-hidden="true" src="./imgs/Canberra.jpg"
+                    style="max-width:100%;display:block;position:static" />
                 </div>
               </div>
             </div>
-            <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
-              <header class="px-0 sm:px-7">
-                <h2 id = 'welcome' class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Welcome to Australasian Joint Conference on Artificial Intelligence!</h2>
-              </header>
-            </div>
-          </main>
-          <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
-            <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
-              <div class="flex flex-col py-2 px-6 lg:px-0">
-                <!-- Sponsors, Simply uncomment the following block -->
-                <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
+          </div>
+          <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
+            <header class="px-0 sm:px-7">
+              <h2 id='welcome' class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Welcome to
+                Australasian Joint Conference on Artificial Intelligence!</h2>
+            </header>
+          </div>
+        </main>
+        <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
+          <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
+            <div class="flex flex-col py-2 px-6 lg:px-0">
+              <!-- Sponsors, Simply uncomment the following block -->
+              <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
                   <div>
                     <p class="mb-5 font-semibold font-headingStyle tracking-semiWide">Silver Sponsors</p>
                     <div class="flex flex-wrap gap-x-12">
@@ -108,7 +399,7 @@
                     </div>
                   </div>
                 </div> -->
-                <!-- <div class="mb-4 md:mb-6">
+              <!-- <div class="mb-4 md:mb-6">
                   <p class="mb-3 font-semibold font-headingStyle tracking-semiWide">Supported by</p>
                   <div class="flex flex-wrap items-center gap-x-12">
                     <a style="width:150px" class="mb-5 lg:mb-0 flex items-center" href="https://www.acm.org/" target="_blank" rel="noreferrer">
@@ -119,47 +410,50 @@
                     </a>
                   </div>
                 </div> -->
-              </div>
-              <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
-                <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra, Australia</small>
-                <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
-              </div>
-              <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
-                <small class = "j_extra_pt">Image credit: <a href="https://pixabay.com/photos/australia-canberra-4560441/">DesignNPrint</a>, <a href="https://creativecommons.org/public-domain/cc0/">CC0 1.0 Universal</a>, via pixabays</small>
-              </div>
-              <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+            </div>
+            <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+              <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra,
+                Australia</small>
+              <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
+            </div>
+            <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+              <small class="j_extra_pt">Image credit: <a
+                  href="https://pixabay.com/photos/australia-canberra-4560441/">DesignNPrint</a>, <a
+                  href="https://creativecommons.org/public-domain/cc0/">CC0 1.0 Universal</a>, via pixabays</small>
+            </div>
+            <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
                 <small class = "j_extra_pt">Website built by: <a href="https://github.com/JesseYang0528" style = "text-decoration: underline;">Hao Yang (Jesse Yang)</a>, <a href="https://github.com/bybeye" style = "text-decoration: underline;">Yingbin Bai (Edward Bai)</a></small>
               </div> -->
-            </div>
-          </footer>
-        </div>
-      </div>
-      <div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true">
+          </div>
+        </footer>
       </div>
     </div>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
-    </script>
-    <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/";/*]]>*/</script>
-    <script id="gatsby-chunk-mapping">
-    /*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-1c9788fca0f90abb50c3.js"],"app":["/app-a59b4b6740a68aeefd26.js"],"component---src-pages-404-js":["/component---src-pages-404-js-3d51b459a80f969a4f66.js"],"component---src-pages-gather-town-js":["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"],"component---src-pages-index-js":["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"],"component---src-pages-organisation-js":["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"],"component---src-pages-phd-school-js":["/component---src-pages-phd-school-js-342a122469920c419385.js"],"component---src-pages-program-at-a-glance-js":["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"],"component---src-pages-program-js":["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"],"component---src-pages-sponsors-js":["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"],"component---src-templates-article-js":["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"]};/*]]>*/
-    </script>
-    <script>
-      function show_mobile_nav()
-      {
-        var current_class = document.getElementById('mobile_menu').className;
-        if (current_class == 'hidden')
-        {
-          document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
-          document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
-          document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
-        }
-        else
-        {
-          document.getElementById('mobile_menu').setAttribute('class', 'hidden');
-          document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
-          document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
-        }
+    <div id="gatsby-announcer"
+      style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
+      aria-live="assertive" aria-atomic="true">
+    </div>
+  </div>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
+  </script>
+  <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/";/*]]>*/</script>
+  <script id="gatsby-chunk-mapping">
+    /*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-1c9788fca0f90abb50c3.js"], "app": ["/app-a59b4b6740a68aeefd26.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-3d51b459a80f969a4f66.js"], "component---src-pages-gather-town-js": ["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"], "component---src-pages-organisation-js": ["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"], "component---src-pages-phd-school-js": ["/component---src-pages-phd-school-js-342a122469920c419385.js"], "component---src-pages-program-at-a-glance-js": ["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"], "component---src-pages-program-js": ["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"], "component---src-pages-sponsors-js": ["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"], "component---src-templates-article-js": ["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"] };/*]]>*/
+  </script>
+  <script>
+    function show_mobile_nav() {
+      var current_class = document.getElementById('mobile_menu').className;
+      if (current_class == 'hidden') {
+        document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
+        document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
+        document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
       }
-    </script>
-  </body>
+      else {
+        document.getElementById('mobile_menu').setAttribute('class', 'hidden');
+        document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
+        document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
+      }
+    }
+  </script>
+</body>
+
 </html>
