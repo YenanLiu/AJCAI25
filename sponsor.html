@@ -37,6 +37,27 @@
   </script>
 
   <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
+
+  <style>
+    .sponsor-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 140px;
+      width: 280px;
+      margin: 15px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    .sponsor-logo {
+      max-height: 120px;
+      max-width: 260px;
+      object-fit: contain;
+    }
+  </style>
 </head>
 
 <body>
@@ -66,273 +87,51 @@
 
               <h3 class="pt-9 mb-5 font-titleFont text-2xl text-mainPurple font-extrabold">Gold Sponsors</h2>
                 <div class='flex flex-row justify-center flex-wrap mt-6 '>
-                  <a class="" href="https://www.anu.edu.au/" target="_blank" rel="noreferrer" style="margin: 15px;">
-                    <img src="./imgs/logo-anu.png" class="j_attraction_pic_screen j_attraction_mobile"
-                      style="width:210px; height: 140px;">
-                  </a>
-                  <a class="" href="https://about.google/intl/ALL_au/" target="_blank" rel="noreferrer"
-                    style="margin: 15px;">
-                    <img src="./imgs/logo_google.png" class="j_attraction_pic_screen j_attraction_mobile"
-                      style="width:250px; height: 140px;">
-                  </a>
+                  <div class="sponsor-logo-container">
+                    <a href="https://www.anu.edu.au/" target="_blank" rel="noreferrer">
+                      <img src="./imgs/logo-anu.png" class="sponsor-logo" alt="ANU Logo">
+                    </a>
+                  </div>
+                  <div class="sponsor-logo-container">
+                    <a href="https://about.google/intl/ALL_au/" target="_blank" rel="noreferrer">
+                      <img src="./imgs/logo_google.png" class="sponsor-logo" alt="Google Logo">
+                    </a>
+                  </div>
                 </div>
 
 
                 <h3 class="pt-9 mb-5 font-titleFont text-2xl text-mainPurple font-extrabold">Silver Sponsors</h2>
 
                   <div class='flex flex-row justify-center flex-wrap mt-6'>
-                    <!-- <a class="" href="https://www.rmit.edu.au/about/schools-colleges/computing-technologies" target="_blank" rel="noreferrer" style="margin: 15px;">
-                        <img src="./imgs/logos/RMIT.jpg" class = "j_attraction_pic_screen j_attraction_mobile" style="width:350px">
-                    </a> -->
-                    <a class="" href="https://www.dairnet.com.au/" target="_blank" rel="noreferrer"
-                      style="margin: 15px;">
-                      <img src="./imgs/dairnet-logo.png" class="j_attraction_pic_screen j_attraction_mobile"
-                        style="width:210px">
-                    </a>
-
-                    <!-- <a class="" href="https://melbconnect.com.au/" target="_blank" rel="noreferrer" style="margin: 15px;">
-                        <img src="./imgs/logos/melbourne-connect.png" class = "j_attraction_pic_screen j_attraction_mobile" style="width:110px">
-                    </a>
-                    <a class="" href="https://www.yepai.io/" target="_blank" rel="noreferrer" style="margin: 15px;">
-                        <img src="./imgs/logos/yepai.png" class = "j_attraction_pic_screen j_attraction_mobile" style="width:360px">
-                      </a> -->
-                    <a class="" href="https://pioneer.au/" target="_blank" rel="noreferrer" style="margin: 15px;">
-                      <img src="./imgs/pioneer.png" class="j_attraction_pic_screen j_attraction_mobile"
-                        style="width:260px">
-                    </a>
-                    <a class="" href="https://fome.ai/" target="_blank" rel="noreferrer" style="margin: 15px;">
-                      <img src="./imgs/Fomelogo.png" class="j_attraction_pic_screen j_attraction_mobile"
-                        style="width:360px">
-                    </a>
-
-                  </div>
-                  <h3 class="pt-9 mb-5 font-titleFont text-2xl text-mainPurple font-extrabold">Bronze Sponsors</h2>
-
-                    <div class='flex flex-row justify-center flex-wrap mt-6'>
-                      <!-- <a class="" href="https://www.swinburne.edu.au/" target="_blank" rel="noreferrer" style="margin: 15px;">
-                    <img src="./imgs/logos/Swinburne.jpg" class = "j_attraction_pic_screen j_attraction_mobile" style="width:260px">
-                  </a>
-                  <a class="" href="https://www.adelaide.edu.au/aiml/" target="_blank" rel="noreferrer" style="margin: 15px;">
-                        <img src="./imgs/logos/AIML_2024.jpg" class = "j_attraction_pic_screen j_attraction_mobile" style="width:350px">
-                  </a>
-
-                    <a class="" href="https://www.t-power.com.au/" target="_blank" rel="noreferrer" style="margin: 15px;">
-                        <img src="./imgs/logos/T-Power.jpg" class = "j_attraction_pic_screen j_attraction_mobile" style="width:135px">
-                  </a> -->
-
+                    <div class="sponsor-logo-container">
+                      <a href="https://www.dairnet.com.au/" target="_blank" rel="noreferrer">
+                        <img src="./imgs/dairnet-logo.png" class="sponsor-logo" alt="DAIRNet Logo">
+                      </a>
                     </div>
 
-                    <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple font-headingStyle tracking-semiWide"></h2> -->
+                    <div class="sponsor-logo-container">
+                      <a href="https://pioneer.au/" target="_blank" rel="noreferrer">
+                        <img src="./imgs/pioneer.png" class="sponsor-logo" alt="Pioneer Logo">
+                      </a>
+                    </div>
 
-                    <!--          <\!-- <div class='flex flex-row justify-center flex-wrap'> -\-> -->
-                    <!--          <\!--    <h2 class="font-titleFont text-3xl"> We want to thank to each one of this year sponsors. </h2> -\-> -->
-                    <!--          <\!-- </div> -\-> -->
+                    <div class="sponsor-logo-container">
+                      <a href="https://fome.ai/" target="_blank" rel="noreferrer">
+                        <img src="./imgs/Fomelogo.png" class="sponsor-logo" alt="Fome Logo">
+                      </a>
+                    </div>
 
-                    <!--          <p class="pt-9 mb-4 font-titleFont text-2xl font-extrabold"><b>Bronze -->
-                    <!--                  Sponsors:  $2,000</b> </p> -->
-                    <!--          <div class='mb-4'> -->
-                    <!--            <span> -->
-                    <!--              The sponsorship entails the following:</span> -->
-                    <!--            <ul style = 'list-style: inside;'> -->
-                    <!--              <li> <span>A company -->
-                    <!--                  brochure can be inserted into the satchel of each attendance. The -->
-                    <!--                  brochure is up to two A4-pages that each page could be printed on -->
-                    <!--                  both sides.</span> </li> -->
-                    <!--              <li> -->
-                    <!--                <span>The display of the sponsor’s name and logo in: </span> -->
-                    <!--                <ul style = 'list-style: inside; text-indent: 2em'>  -->
-                    <!--  	        <li> <span>Printed -->
-                    <!--  	            materials, as schedule permits </span></li> -->
-                    <!--  	        <li><span> -->
-                    <!--  	            Conference -->
-                    <!--  	            website and proceedings</span></li> -->
-                    <!--  	        <li><span>Conference -->
-                    <!--  	            registration area</span></li> -->
-                    <!--  	        <li><span>Signs at -->
-                    <!--  	            appropriate conference events</span></li> -->
-                    <!--                </ul> -->
-                    <!--            </ul> -->
-                    <!--          </div> -->
+                    <div class="sponsor-logo-container">
+                      <a href="https://www.yepai.io/" target="_blank" rel="noreferrer">
+                        <img src="./imgs/yepai.png" class="sponsor-logo" alt="YePAI Logo">
+                      </a>
+                    </div>
+                  </div>
 
-
-
-                    <!--          <p class="pt-9 mb-4 font-titleFont text-2xl font-extrabold"><b>Silver -->
-                    <!--              Sponsors: $5,000</b></p> -->
-                    <!--          <div class='mb-4'>                   -->
-                    <!--            <span> -->
-                    <!--              The sponsorship entails the following:</span></br> -->
-                    <!--            <ul style = 'list-style: inside;'> -->
-                    <!--              <li> <span>A company -->
-                    <!--                  brochure can be inserted into the satchel of each attendance. The -->
-                    <!--                  brochure is up to two A4-pages that each page could be printed on -->
-                    <!--                  both sides.</span> </li> -->
-                    <!--              <li> <span> 2 complementary full registrations (these include welcome reception, banquet, coffee breaks, conference bag and access to technical program)</span></li> -->
-                    <!--              <li> -->
-                    <!--                <span>The display of the sponsor’s name and logo in: </span> -->
-                    <!--                <ul style = 'list-style: inside; text-indent: 2em'>  -->
-                    <!--  	        <li> <span>Printed -->
-                    <!--  	            materials, as schedule permits </span></li> -->
-                    <!--  	        <li><span> -->
-                    <!--  	            Conference -->
-                    <!--  	            website and proceedings</span></li> -->
-                    <!--  	        <li><span>Conference -->
-                    <!--  	            registration area</span></li> -->
-                    <!--  	        <li><span>Signs at -->
-                    <!--  	            appropriate conference events</span></li> -->
-                    <!--                </ul> -->
-                    <!--            </ul> -->
-                    <!--          </div> -->
-
-
-
-                    <!--          <p class="pt-9 mb-4 font-titleFont text-2xl font-extrabold"><b>Gold Sponsors: $10,000</b></p> -->
-                    <!--          <div class='mb-4'>                   -->
-                    <!--            <span> -->
-                    <!--              The sponsorship entails the following:</span></br> -->
-                    <!--            <ul style = 'list-style: inside;'> -->
-                    <!--              <li> <span>2 A4 page of the company brochure (double side) to be inserted into the satchel of each attendance</span> </li> -->
-                    <!--              <li> <span> 4 complementary full registrations (these include welcome reception, banquet, coffee breaks, conference bag and access to technical program)</span></li> -->
-                    <!--              <li> <span>1 complementary exhibit booth</span></li> -->
-                    <!--              <li> -->
-                    <!--                <span>The display of the sponsor’s name and logo in: </span> -->
-                    <!--                <ul style = 'list-style: inside; text-indent: 2em'>  -->
-                    <!--  	        <li> <span>Printed -->
-                    <!--  	            materials, as schedule permits </span></li> -->
-                    <!--  	        <li><span> -->
-                    <!--  	            Conference -->
-                    <!--  	            website and proceedings</span></li> -->
-                    <!--  	        <li><span>Conference -->
-                    <!--  	            registration area</span></li> -->
-                    <!--  	        <li><span>Signs at -->
-                    <!--  	            appropriate conference events</span></li> -->
-                    <!--                </ul> -->
-                    <!--            </ul> -->
-                    <!--          </div> -->
-
-                    <!--          <p class="pt-9 mb-4 font-titleFont text-2xl font-extrabold"><b>Platinum Sponsors: $20,000</b></p> -->
-                    <!--          <div class='mb-4'>                   -->
-                    <!--            <span> -->
-                    <!--              The sponsorship entails the following:</span></br> -->
-                    <!--            <ul style = 'list-style: inside;'> -->
-                    <!--              <li> <span>4 A4 page of the company brochure (double side) to be inserted into the satchel of each attendance</span> </li> -->
-                    <!--              <li> <span> 6 complementary full registrations (these include welcome reception, banquet, coffee breaks, conference bag and access to technical program)</span></li> -->
-                    <!--              <li> <span> 2 complementary exhibit booth</span></li> -->
-                    <!--              <li> <span>Other public acknowledgement upon to negotiation. </span></li> -->
-                    <!--              <li> -->
-                    <!--                <span>The display of the sponsor’s name and logo in: </span> -->
-                    <!--                <ul style = 'list-style: inside; text-indent: 2em'>  -->
-                    <!--  	        <li> <span>Printed -->
-                    <!--  	            materials, as schedule permits </span></li> -->
-                    <!--  	        <li><span> -->
-                    <!--  	            Conference -->
-                    <!--  	            website and proceedings</span></li> -->
-                    <!--  	        <li><span>Conference -->
-                    <!--  	            registration area</span></li> -->
-                    <!--  	        <li><span>Signs at -->
-                    <!--  	            appropriate conference events</span></li> -->
-                    <!--                </ul> -->
-                    <!--            </ul> -->
-                    <!--          </div> -->
-
-                    <!--          <p class='mb-4'>  -->
-                    <!--            <span class="pt-9 mb-4 font-titleFont text-2xl font-extrabold"><b>Exclusive Dimond Sponsors:</b></span> No up limit, but only up to one such sponsor each year.  The highest sponsor whose sponsored money is more than $20,000 is qualified as the Diamond sponsor.  -->
-                    <!--          </p> -->
-                    <!--          <div class='mb-4'>                   -->
-                    <!--            <span> -->
-                    <!--              The sponsorship entails the following:</span></br> -->
-                    <!--            <ul style = 'list-style: inside;'> -->
-                    <!--              <li> <span>4 A4 page of the company brochure (double side) to be inserted into the satchel of each attendance</span> </li> -->
-                    <!--              <li> <span>1 half a hour invited talk for the AI applications in the conference</span> </li> -->
-                    <!--              <li> <span> 6 complementary full registrations (these include welcome reception, banquet, coffee breaks, conference bag and access to technical program)</span></li> -->
-                    <!--              <li> <span> 2 complementary exhibit booth</span></li> -->
-                    <!--              <li> <span>Other public acknowledgement upon to negotiation. </span></li> -->
-                    <!--              <li> -->
-                    <!--                <span>The display of the sponsor’s name and logo in: </span> -->
-                    <!--                <ul style = 'list-style: inside; text-indent: 2em'>  -->
-                    <!--  	        <li> <span>Printed -->
-                    <!--  	            materials, as schedule permits </span></li> -->
-                    <!--  	        <li><span> -->
-                    <!--  	            Conference -->
-                    <!--  	            website and proceedings</span></li> -->
-                    <!--  	        <li><span>Conference -->
-                    <!--  	            registration area</span></li> -->
-                    <!--  	        <li><span>Signs at -->
-                    <!--  	            appropriate conference events</span></li> -->
-                    <!--                </ul> -->
-                    <!--            </ul> -->
-                    <!--          </div> -->
-                    <!-- <p class='mb-4'>  -->
-                    <!--            <span class="pt-9 mb-4 font-titleFont text-2xl font-extrabold"><b>Prize and Awards: from $500 - $1,500</b></span>   -->
-                    <!--          </p> -->
-                    <!--          <div class='mb-4'>                   -->
-                    <!--            <span> -->
-                    <!--              Sponsorship Benefits</span></br> -->
-                    <!--            <ul style = 'list-style: inside;'> -->
-                    <!--              <li> <span>Opportunity for a representative of your organisation to present the prize or award at the award ceremony</span> </li> -->
-                    <!--              <li> <span>Logo on chosen award certificate</span> </li> -->
-                    <!--              <li> <span> Logo on all promotional material, including the conference website (linked to company website)</span></li> -->
-                    <!--              <li> <span>Signage displayed in the conference foyer (pull-up banner supplied by sponsor) and on stage during award ceremony </span></li> -->
-                    <!--              <li> -->
-                    <!--                <span>Detailed award and prize list is as follows </span> -->
-                    <!--                <ul style = 'list-style: inside; text-indent: 2em'>  -->
-                    <!--  	        <li> <span>POSTER PRIZE: $500</span></li> -->
-                    <!--  	        <li><span> -->
-                    <!--  	            BEST PAPER AWARD: $500/span></li> -->
-                    <!--  	        <li><span>BEST STUDENT PAPER AWARD: $500</span></li> -->
-                    <!--  	        <li><span>BEST ECR PAPER AWARD: $500</span></li> -->
-                    <!--                  <li><span>DISTINGUISHED REVIEWER AWARDS (x3): $1,500</span></li> -->
-                    <!--                </ul> -->
-                    <!--            </ul> -->
-                    <!--          </div> -->
-
-
-                    <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple font-headingStyle tracking-semiWide"></h2> -->
-
-                    <!-- <div class='flex flex-row justify-center flex-wrap mt-6'> -->
-                    <!--   <a class="" href="https://www.dairnet.com.au/" target="_blank" rel="noreferrer" style="margin: 15px;"> -->
-                    <!--     <img src="./imgs/dairnet-logo.png" class = "j_attraction_pic_screen j_attraction_mobile" style="width:350px"> -->
-                    <!--   </a> -->
-
-                    <!--   <a class="" href="https://www.pioneer.au/" target="_blank" rel="noreferrer" style="margin: 15px;"> -->
-                    <!--     <img src="./imgs/pioneer-logo.jpeg" class = "j_attraction_pic_screen j_attraction_mobile" style="width:400px"> -->
-                    <!--   </a> -->
-
-                    <!--   <a class="" href="https://www.uq.edu.au/" target="_blank" rel="noreferrer" style="margin: 15px;"> -->
-                    <!--     <img src="./imgs/uq-logo.png" class = "j_attraction_pic_screen j_attraction_mobile" style="width:220px"> -->
-                    <!--   </a> -->
-                    <!-- </div> -->
-
-
-                    <!-- <\!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple font-headingStyle tracking-semiWide"></h2> -\-> -->
-
-                    <!-- <div class='flex flex-row justify-center flex-wrap mt-6'> -->
-
-                    <!--   <a class="" href="https://www.sydney.edu.au/" target="_blank" rel="noreferrer" style="margin: 15px 30px"> -->
-                    <!--     <img src="./imgs/usyd-logo.png" class = "j_attraction_pic_screen j_attraction_mobile" style="width:230px;"> -->
-                    <!--   </a> -->
-
-                    <!--   <a class="" href="https://www.acs.org.au/" target="_blank" rel="noreferrer" style="margin: 15px 30px"> -->
-                    <!--     <img src="./imgs/acs-logo.jpeg" class = "j_attraction_pic_screen j_attraction_mobile" style="width:370px"> -->
-                    <!--   </a> -->
-
-                    <!--    <a class="" href="https://www.springer.com/" target="_blank" rel="noreferrer" style="margin: 15px 30px"> -->
-                    <!--     <img src="./imgs/springer-logo.png" class = "j_attraction_pic_screen j_attraction_mobile" style="width:230px"> -->
-                    <!--   </a> -->
-                    <!-- </div> -->
-
-                    <!-- <div class='flex flex-row justify-center flex-wrap mt-6'> -->
-                    <!--   <a class="" href="https://www.uts.edu.au/" target="_blank" rel="noreferrer" style="margin: 15px 30px"> -->
-                    <!--     <img src="./imgs/uts-logo.jpg" class = "j_attraction_pic_screen j_attraction_mobile" style="width:400px;"> -->
-                    <!--   </a> -->
-
-                    <!--   <a class="" href="https://www.unsw.edu.au/unsw-ai" target="_blank" rel="noreferrer" style="margin: 15px 30px"> -->
-                    <!--     <img src="./imgs/unsw_ai.png" class = "j_attraction_pic_screen j_attraction_mobile" style="width:430px;"> -->
-                    <!--   </a> -->
-
-                    <!--   <a class="" href="https://www.adelaide.edu.au/" target="_blank" rel="noreferrer" style="margin: 15px 30px"> -->
-                    <!--     <img src="./imgs/adelaide.gif" class = "j_attraction_pic_screen j_attraction_mobile" style="width:370px;"> -->
-                    <!--   </a> -->
-                    <!-- </div> -->
+                  <h3 class="pt-9 mb-5 font-titleFont text-2xl text-mainPurple font-extrabold">Bronze Sponsors</h2>
+                    <div class='flex flex-row justify-center flex-wrap mt-6'>
+                      <!-- 目前还没有Bronze Sponsors -->
+                    </div>
 
             </header>
           </div>
@@ -340,53 +139,12 @@
         <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
           <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
             <div class="flex flex-col py-2 px-6 lg:px-0">
-              <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
-                  <div>
-                    <p class="mb-5 font-semibold font-headingStyle tracking-semiWide">Silver Sponsors</p>
-                    <div class="flex flex-wrap gap-x-12">
-                      <a style="width:150px" class="mb-5 lg:mb-0 flex items-center" href="https://www.uq.edu.au/" target="_blank" rel="noreferrer">
-                        <img style="height:38px;width:137.52px" src="./img/uq-logo-1f72447b9dba430953231ec89af646ba.svg" alt="UQ Logo"/>
-                      </a>
-                      <a style="width: 110px;" class="mb-5 lg:mb-0 flex items-center" href="https://ai.uq.edu.au/collaboratory" target="_blank" rel="noreferrer">
-                        <img style="height:38px;width:137.52px" src="./img/UQAI_Collaboratory_purple_CMYK.png" alt="UQ AI Collaboratory Logo"/>
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="mb-5 font-semibold font-headingStyle tracking-semiWide">Bronze Sponsors</p>
-                    <div class="flex flex-wrap gap-x-12">
-                      <a style="width:170px" class="mb-5 lg:mb-0 flex items-center" href="https://www.springer.com/gp" target="_blank" rel="noreferrer">
-                        <img style="height:40px;width:170px" src="/img/springer-logo.svg" alt="Springer Logo"/>
-                      </a>
-                      <a style="width:170px" class="mb-5 lg:mb-0 flex items-center" href="https://www.adelaide.edu.au/" target="_blank" rel="noreferrer">
-                        <img style="height:40px; width:90.35px" src="/img/adelaide_logo.png" alt="The University Of Adelaide Logo">
-                      </a>
-                    </div>
-                  </div>
-                </div> -->
-              <!-- <div class="mb-4 md:mb-6">
-                  <p class="mb-3 font-semibold font-headingStyle tracking-semiWide">Supported by</p>
-                  <div class="flex flex-wrap items-center gap-x-12">
-                    <a style="width:150px" class="mb-5 lg:mb-0 flex items-center" href="https://www.acm.org/" target="_blank" rel="noreferrer">
-                      <img style="height:55px;width:150px" src="/static/acm-logo-d6eaa6e77309046bc819da96f75d77bb.svg" alt="ACM Logo"/>
-                    </a>
-                    <a style="width:116.36px" class="mb-5 lg:mb-0 flex items-center" href="http://www.sigmm.org/" target="_blank" rel="noreferrer">
-                      <img style="height:30px;width:116.36px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NjggMTk4Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzAyOGZiZjt9LmNscy0ye2ZpbGw6IzAwNDY2MDt9LmNscy0ze2ZpbGw6IzAwNWM3ZDt9LmNscy00e2ZpbGw6IzAwYjRmMTt9LmNscy01e2ZpbGw6IzhkYmRkNDt9LmNscy02e2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IlNJR01NX0xvZ28iIGRhdGEtbmFtZT0iU0lHTU0gTG9nbyI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTQuMjIsMEg4NS4zM2EwLDAsMCwwLDEsMCwwVjY2YTAsMCwwLDAsMSwwLDBIMGEwLDAsMCwwLDEsMCwwVjE0LjIyQTE0LjIyLDE0LjIyLDAsMCwxLDE0LjIyLDBaIi8+PHJlY3QgY2xhc3M9ImNscy0yIiB4PSI4NS4zMyIgd2lkdGg9Ijg1LjMzIiBoZWlnaHQ9IjY2Ii8+PHJlY3QgY2xhc3M9ImNscy0zIiB4PSIxNzAuNjciIHdpZHRoPSI4NS4zMyIgaGVpZ2h0PSI2NiIvPjxyZWN0IGNsYXNzPSJjbHMtNCIgeD0iMjU2IiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTUiIHg9IjM0MS4zMyIgd2lkdGg9Ijg1LjMzIiBoZWlnaHQ9IjY2Ii8+PHJlY3QgY2xhc3M9ImNscy0zIiB4PSI0MjYuNjciIHdpZHRoPSI4NS4zMyIgaGVpZ2h0PSI2NiIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iNTEyIiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTIiIHg9IjU5Ny4zMyIgd2lkdGg9Ijg1LjMzIiBoZWlnaHQ9IjY2Ii8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNNjgyLjY3LDBoNzEuMTFBMTQuMjIsMTQuMjIsMCwwLDEsNzY4LDE0LjIyVjY2YTAsMCwwLDAsMSwwLDBINjgyLjY3YTAsMCwwLDAsMSwwLDBWMEEwLDAsMCwwLDEsNjgyLjY3LDBaIi8+PHJlY3QgY2xhc3M9ImNscy00IiB5PSI2NiIgd2lkdGg9Ijg1LjMzIiBoZWlnaHQ9IjY2Ii8+PHJlY3QgY2xhc3M9ImNscy01IiB4PSI4NS4zMyIgeT0iNjYiIHdpZHRoPSI4NS4zMyIgaGVpZ2h0PSI2NiIvPjxyZWN0IGNsYXNzPSJjbHMtNCIgeD0iMTcwLjY3IiB5PSI2NiIgd2lkdGg9Ijg1LjMzIiBoZWlnaHQ9IjY2Ii8+PHJlY3QgY2xhc3M9ImNscy0xIiB4PSIyNTYiIHk9IjY2IiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTIiIHg9IjM0MS4zMyIgeT0iNjYiIHdpZHRoPSI4NS4zMyIgaGVpZ2h0PSI2NiIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iNDI2LjY3IiB5PSI2NiIgd2lkdGg9Ijg1LjMzIiBoZWlnaHQ9IjY2Ii8+PHJlY3QgY2xhc3M9ImNscy00IiB4PSI1MTIiIHk9IjY2IiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTUiIHg9IjU5Ny4zMyIgeT0iNjYiIHdpZHRoPSI4NS4zMyIgaGVpZ2h0PSI2NiIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iNjgyLjY3IiB5PSI2NiIgd2lkdGg9Ijg1LjMzIiBoZWlnaHQ9IjY2Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMCwxMzJIODUuMzNhMCwwLDAsMCwxLDAsMHY2NmEwLDAsMCwwLDEsMCwwSDE0LjIyQTE0LjIyLDE0LjIyLDAsMCwxLDAsMTgzLjc4VjEzMkEwLDAsMCwwLDEsMCwxMzJaIi8+PHJlY3QgY2xhc3M9ImNscy0zIiB4PSI4NS4zMyIgeT0iMTMyIiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTUiIHg9IjE3MC42NyIgeT0iMTMyIiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjI1NiIgeT0iMTMyIiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTMiIHg9IjM0MS4zMyIgeT0iMTMyIiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjQyNi42NyIgeT0iMTMyIiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTUiIHg9IjUxMiIgeT0iMTMyIiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cmVjdCBjbGFzcz0iY2xzLTQiIHg9IjU5Ny4zMyIgeT0iMTMyIiB3aWR0aD0iODUuMzMiIGhlaWdodD0iNjYiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik02ODIuNjcsMTMySDc2OGEwLDAsMCwwLDEsMCwwdjUxLjc4QTE0LjIyLDE0LjIyLDAsMCwxLDc1My43OCwxOThINjgyLjY3YTAsMCwwLDAsMSwwLDBWMTMyQTAsMCwwLDAsMSw2ODIuNjcsMTMyWiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNiIgcG9pbnRzPSIyOC40NCAyOC40NCAxNzAuNjcgMjguNDQgMTcwLjY3IDU2Ljg5IDU2Ljg5IDU2Ljg5IDU2Ljg5IDg0Ljc4IDE3MC42NyA4NC43OCAxNzAuNjcgMTY5LjU2IDI4LjQ0IDE2OS41NiAyOC40NCAxNDEuMTEgMTQyLjIyIDE0MS4xMSAxNDIuMjIgMTEzLjIyIDI4LjQ0IDExMy4yMiAyOC40NCAyOC40NCIvPjxyZWN0IGNsYXNzPSJjbHMtNiIgeD0iMTk5LjExIiB5PSIyOC40NCIgd2lkdGg9IjI4LjQ0IiBoZWlnaHQ9IjE0MS4xMSIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNiIgcG9pbnRzPSIyNTYgMjguNDQgMzk3Ljg0IDI4LjQ0IDM5Ny44NCA1Ni44OSAyODQuNDQgNTYuODkgMjg0LjQ0IDE0MS4xMSAzNjkuNzggMTQxLjExIDM2OS43OCAxMTMuMjIgMzEyLjg5IDExMy4yMiAzMTIuODkgODQuNzggMzk3Ljg0IDg0Ljc4IDM5OC4yMiAxNjkuNTYgMjU2IDE2OS41NiAyNTYgMjguNDQiLz48cG9seWdvbiBjbGFzcz0iY2xzLTYiIHBvaW50cz0iNDI2LjY3IDI4LjQ0IDQyNi42NyAxNjkuNTYgNDU1LjExIDE2OS41NiA0NTUuMTEgNTYuODkgNDgzLjU2IDU2Ljg5IDQ4My41NiAxNjkuNTYgNTEyIDE2OS41NiA1MTIgNTYuODkgNTQwLjQ0IDU2Ljg5IDU0MC40NCAxNjkuNTYgNTY4Ljg5IDE2OS41NiA1NjguODkgMjguNDQgNDI2LjY3IDI4LjQ0Ii8+PHBvbHlnb24gY2xhc3M9ImNscy02IiBwb2ludHM9IjU5Ny4zMyAyOC40NCA1OTcuMzMgMTY5LjU2IDYyNS43OCAxNjkuNTYgNjI1Ljc4IDU2Ljg5IDY1NC4yMiA1Ni44OSA2NTQuMjIgMTY5LjU2IDY4Mi42NyAxNjkuNTYgNjgyLjY3IDU2Ljg5IDcxMS4xMSA1Ni44OSA3MTEuMTEgMTY5LjU2IDczOS41NiAxNjkuNTYgNzM5LjU2IDI4LjQ0IDU5Ny4zMyAyOC40NCIvPjwvZz48L2c+PC9zdmc+" alt="SIGMM Logo"/>
-                    </a>
-                  </div>
-                </div> -->
+              <!-- Sponsors section is currently commented out -->
             </div>
             <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
               <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra,
                 Australia</small>
-              <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
             </div>
-            <!-- <div>
-                <small>Image credit: <a href="https://commons.wikimedia.org/wiki/File:Brisbane_Sign_and_Skyline_of_Brisbane_CBD,_Queensland_in_Feb_2020.jpg">Kgbo</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</small>
-              </div> -->
-            <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
-                <small class = "j_extra_pt">Website built by: <a href="https://github.com/JesseYang0528" style = "text-decoration: underline;">Hao Yang (Jesse Yang)</a>, <a href="https://github.com/bybeye" style = "text-decoration: underline;">Yingbin Bai (Edward Bai)</a></small>
-              </div> -->
           </div>
         </footer>
       </div>
