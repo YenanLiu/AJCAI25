@@ -1,81 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charSet="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"/>
 
-    <link rel = "stylesheet" type = 'text/css' href = './css/sub_common.css'/>
-    <link rel = "icon" sizes ="32x32" href = './imgs/favicons/favicon-32x32.png' />
-    <link rel = "icon" sizes ="192x192" href = './imgs/favicons/favicon-192x192.png' />
-    <link rel = "apple-touch-icon" sizes ="180x180" href = './imgs/favicons/favicon-180x180.png' />
-    
-    <meta name="generator" content="Gatsby 4.3.0"/>
-    <noscript>
-      <style>
-        .gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}
-      </style>
-    </noscript>
-    <script type="module">
-      const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;
-      e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);
-    </script>
-    <meta name="theme-color" content="#51247a"/>
-    <script type = "text/javascript" src = './js/common.js'></script>
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
 
-    <script type="text/javascript">
-      window.onload=function(){
-        changeMobileMenu('speakers');
+  <link rel="stylesheet" type='text/css' href='./css/sub_common.css' />
+  <link rel="icon" sizes="32x32" href='./imgs/favicons/favicon-32x32.png' />
+  <link rel="icon" sizes="192x192" href='./imgs/favicons/favicon-192x192.png' />
+  <link rel="apple-touch-icon" sizes="180x180" href='./imgs/favicons/favicon-180x180.png' />
+
+  <meta name="generator" content="Gatsby 4.3.0" />
+  <noscript>
+    <style>
+      .gatsby-image-wrapper noscript [data-main-image] {
+        opacity: 1 !important
       }
-    </script>
 
-    <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
-  </head> 
-  <body>
-    <div id="___gatsby">
-      <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
-        <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
-          <header>
+      .gatsby-image-wrapper [data-placeholder-image] {
+        opacity: 0 !important
+      }
+    </style>
+  </noscript>
+  <script type="module">
+    const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
+    e && document.body.addEventListener("load", (function (e) { if (void 0 === e.target.dataset.mainImage) return; if (void 0 === e.target.dataset.gatsbyImageSsr) return; const t = e.target; let a = null, n = t; for (; null === a && n;)void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode), n = n.parentNode; const o = a.querySelector("[data-placeholder-image]"), r = new Image; r.src = t.currentSrc, r.decode().catch((() => { })).then((() => { t.style.opacity = 1, o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear") })) }), !0);
+  </script>
+  <meta name="theme-color" content="#51247a" />
+  <script type="text/javascript" src='./js/common.js'></script>
 
-<!-- Nav Bar -->
-          <iframe id = 'menu' src = './top_menu.html' frameborder = '0' width = '100%' height = '64px' scrolling = 'auto' style = 'z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
-<!-- End Of Nav Bar -->
+  <script type="text/javascript">
+    window.onload = function () {
+      changeMobileMenu('speakers');
+    }
+  </script>
 
-          </header>
-          <div class="w-full h-16">
-          </div>
-          <main class="w-full">
-            <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
-              <header class="px-0 sm:px-7">
+  <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
 
-                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Keynote Presentations</h2>
+  <style>
+    .speaker-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
 
-                <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-                
-                  
-                  <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                    <a class="mr-0 mb-2 md:mb-0 px-0 sm:px-2 pt-2 flex flex-col items-center sm:rounded-lg" style="width:100%">
-                      <div> 
-                        <img src="./imgs/anonymous.png" class = "j_attraction_pic_screen j_attraction_mobile">
-                        <div class = "j_attraction_text_screen j_attraction_text_mobile">
-                            <h2 class = "pt-3 mb-6 font-titleFont text-xl text-mainPurple font-extrabold" style = 'font-size: 18px;text-align:center'>TBD</h2>
+    .speaker-image-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 15px;
+    }
 
-                            <p style = 'font-size: 16px;text-align:left'>
-                              <span style = 'font-size: 16px; font-weight: 700;'>Speaker: Anonymous, University of Technology Sydney, Australia</span>
-                              <br>
-                              <b>Abstract:</b>
-                              TBD
-                              <br><br>
+    .j_attraction_pic_screen,
+    .j_attraction_mobile {
+      max-width: 300px;
+      max-height: 300px;
+      object-fit: contain;
+    }
 
-                              <b>Bio:</b>
-                              TBD
-                            </p>
-                        </div>                                                       
-                      </div>                       
-                    </a>
+    .j_attraction_text_screen,
+    .j_attraction_text_mobile {
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="___gatsby">
+    <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+      <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
+        <header>
+
+          <!-- Nav Bar -->
+          <iframe id='menu' src='./top_menu.html' frameborder='0' width='100%' height='64px' scrolling='auto'
+            style='z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
+          <!-- End Of Nav Bar -->
+
+        </header>
+        <div class="w-full h-16">
+        </div>
+        <main class="w-full">
+          <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
+            <header class="px-0 sm:px-7">
+
+              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Keynote Presentations</h2>
+
+              <h2
+                class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
+              </h2>
+
+              <div class="flex flex-row justify-center sm:justify-start flex-wrap">
+                <a class="mr-0 mb-2 md:mb-0 px-0 sm:px-2 pt-2 flex flex-col items-center sm:rounded-lg"
+                  style="width:100%">
+                  <div class="speaker-container">
+                    <div class="speaker-image-container">
+                      <img src="./imgs/portraits/TobyBaxter3.jpg" class="j_attraction_pic_screen j_attraction_mobile">
+                    </div>
+                    <div class="j_attraction_text_screen j_attraction_text_mobile">
+                      <h2 class="pt-3 mb-6 font-titleFont text-xl text-mainPurple font-extrabold"
+                        style='font-size: 18px;text-align:center'>The Shortest History of AI</h2>
+
+                      <p style='font-size: 16px;text-align:left'>
+                        <span style='font-size: 16px; font-weight: 700;'>Speaker: Toby Walsh, UNSW and CSIRO Data61,
+                          Australia</span>
+                        <br>
+                        <b>Abstract:</b>
+                        TBD
+                        <br><br>
+
+                        <b>Bio:</b>
+                        Toby Walsh is an ARC Laureate Fellow and Scientia Professor of AI at UNSW and CSIRO Data61. He
+                        is Chief Scientist of UNSW.AI, UNSW's new AI Institute. He is a strong advocate for limits to
+                        ensure AI is used to improve our lives, having spoken at the UN, and to heads of state,
+                        parliamentary bodies, company boards and many others on this topic. This advocacy has led to him
+                        being "banned indefinitely" from Russia. He is a Fellow of the Australia Academy of Science, and
+                        was named on the international "Who's Who in AI" list of influencers. He has written five books
+                        on AI for a general audience, the most recent is "The Shortest History of AI".
+                      </p>
+                    </div>
                   </div>
+                </a>
+              </div>
 
-                  <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
+              <!-- <h2
+                class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
+              </h2> -->
+
+              <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
+                <a class="mr-0 mb-2 md:mb-0 px-0 sm:px-2 pt-2 flex flex-col items-center sm:rounded-lg"
+                  style="width:100%">
+                  <div class="speaker-container">
+                    <div class="speaker-image-container">
+                      <img src="./imgs/anonymous.png" class="j_attraction_pic_screen j_attraction_mobile">
+                    </div>
+                    <div class="j_attraction_text_screen j_attraction_text_mobile">
+                      <h2 class="pt-3 mb-6 font-titleFont text-xl text-mainPurple font-extrabold"
+                        style='font-size: 18px;text-align:center'>TBD</h2>
+
+                      <p style='font-size: 16px;text-align:left'>
+                        <span style='font-size: 16px; font-weight: 700;'>Speaker: Anonymous, University of Technology
+                          Sydney, Australia</span>
+                        <br>
+                        <b>Abstract:</b>
+                        TBD
+                        <br><br>
+
+                        <b>Bio:</b>
+                        TBD
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div> -->
+
+              <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
 
                   <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                     <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%">
@@ -92,7 +173,7 @@
                               <br><br>
 
                               <b>Bio:</b>
-                              Manik Varma is a Distinguished Scientist and Vice President at Microsoft Research India. He is best known for having started the research area of extreme classification in large-scale machine learning which has opened a new paradigm for search and recommendation applications. As a result, his algorithms have been deployed extensively on the Microsoft Search and Advertising platform including in the new Bing Chat experience. They have made billions of predictions a day, have improved the experience and productivity of hundreds of millions of people and increased the reach and revenue of many businesses worldwide. Manik is also known for having developed tiny classifiers which can fit in 2-16 KB of RAM and which can be deployed on microcontrollers smaller than a grain of rice. These classifiers have protected hundreds of millions of devices from unknown viruses and malware. Manik has served as an Associate Editor-in-Chief of the IEEE TPAMI journal and as a Senior Area Chair (or equivalent) at most of the premiere conferences on machine learning, artificial intelligence and computer vision. Manik is a recipient of the Government of India’s Bhatnagar Prize, is a Fellow of the Indian Academies of Science and Engineering, has been a Visiting Miller Professor at UC Berkeley and a Rhodes Scholar at Oxford.
+                              Manik Varma is a Distinguished Scientist and Vice President at Microsoft Research India. He is best known for having started the research area of extreme classification in large-scale machine learning which has opened a new paradigm for search and recommendation applications. As a result, his algorithms have been deployed extensively on the Microsoft Search and Advertising platform including in the new Bing Chat experience. They have made billions of predictions a day, have improved the experience and productivity of hundreds of millions of people and increased the reach and revenue of many businesses worldwide. Manik is also known for having developed tiny classifiers which can fit in 2-16 KB of RAM and which can be deployed on microcontrollers smaller than a grain of rice. These classifiers have protected hundreds of millions of devices from unknown viruses and malware. Manik has served as an Associate Editor-in-Chief of the IEEE TPAMI journal and as a Senior Area Chair (or equivalent) at most of the premiere conferences on machine learning, artificial intelligence and computer vision. Manik is a recipient of the Government of India's Bhatnagar Prize, is a Fellow of the Indian Academies of Science and Engineering, has been a Visiting Miller Professor at UC Berkeley and a Rhodes Scholar at Oxford.
 
                             </p>
                         </div>                                                       
@@ -100,7 +181,7 @@
                     </a>
                   </div> -->
 
-                  <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
+              <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
 
                   <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                     <a class="mr-0 mb-2 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%">
@@ -168,7 +249,7 @@
                               <b>Bio:</b>
                               Maria is a Professor at the Faculty of Information Technology at Monash University with more than 25 years of experience as an academic. She is currently a member of the ARC College of Experts, the Co-Chair of the Monash-Woodside FutureLab and until July 2022 the Deputy Dean Research of the Faculty. Prior to that she was overall Deputy Dean of the Faculty (2013-2016) and the Head of the Caulfield School of Information Technology (2009-2011). Her research interests include Combinatorial Optimisation, Program Analysis and Transformation, Programming Languages and Bioinformatics. Since 2010 she has been Area Editor of the Journal of Theory and Practice of Logic Programming and, since 2019, member of the Editorial Board of the Constraints journal. She has been Chief Investigator in 11 ARC grants (2 cross-Faculty), and Principal Investigator in an NHMRC program.  <br/> <br/>
 
-                              Maria’s PhD won the Universidad Politecnica de Madrid’s Best PhD Award. In 1997 she was awarded the first and only prestigious Logan Fellowship in the Faculty of Information Technology, which she held for six years. In 2005 she won, with Peter Stuckey, the International Constraint Modelling Challenge. She was an elected member of the Executive Committee of the Association of Logic Programming (2005-08) and of the Executive Committee of the Association of Constraint Programming (2017-20), of which she was also elected as President (2019-20). In 2021 she was inducted into the Monash Honour Roll.
+                              Maria's PhD won the Universidad Politecnica de Madrid's Best PhD Award. In 1997 she was awarded the first and only prestigious Logan Fellowship in the Faculty of Information Technology, which she held for six years. In 2005 she won, with Peter Stuckey, the International Constraint Modelling Challenge. She was an elected member of the Executive Committee of the Association of Logic Programming (2005-08) and of the Executive Committee of the Association of Constraint Programming (2017-20), of which she was also elected as President (2019-20). In 2021 she was inducted into the Monash Honour Roll.
 
                             </p>
                         </div>                                                       
@@ -195,7 +276,7 @@
                               <b>Bio:</b>
                               Professor Mengjie Zhang is a Fellow of Royal Society of New Zealand, a Fellow of Engineering New Zealand, a Fellow of IEEE, an IEEE Distinguished Lecturer, currently Professor of Computer Science at Victoria University of Wellington, where he heads the interdisciplinary Evolutionary Computation and Machine Learning Research Group. He is also the founding Director of the Centre for Data Science and Artificial Intelligence at the University. <br/> <br/>
 
-                              His research is mainly focused on AI, machine learning and big data, particularly in evolutionary learning and optimisation, feature selection/construction and big dimensionality reduction, computer vision and image analysis, scheduling and combinatorial optimisation, classification with unbalanced data and missing data, and evolutionary deep learning and transfer learning. Prof Zhang has published over 800 research papers in refereed international journals and conferences. He has been serving as an associated editor for over ten international journals including IEEE Transactions on Evolutionary Computation, IEEE Transactions on Cybernetics, the Evolutionary Computation Journal (MIT Press), and involving major AI and EC conferences as a chair. He received the “EvoStar/SPECIES Award for Outstanding Contribution to Evolutionary Computation in Europe” in 2023. Since 2007, he has been listed as a top five (currently No. 4) world genetic programming researchers by the GP bibliography (http://www.cs.bham.ac.uk/~wbl/biblio/gp-html/index.html). <br/> <br/>
+                              His research is mainly focused on AI, machine learning and big data, particularly in evolutionary learning and optimisation, feature selection/construction and big dimensionality reduction, computer vision and image analysis, scheduling and combinatorial optimisation, classification with unbalanced data and missing data, and evolutionary deep learning and transfer learning. Prof Zhang has published over 800 research papers in refereed international journals and conferences. He has been serving as an associated editor for over ten international journals including IEEE Transactions on Evolutionary Computation, IEEE Transactions on Cybernetics, the Evolutionary Computation Journal (MIT Press), and involving major AI and EC conferences as a chair. He received the "EvoStar/SPECIES Award for Outstanding Contribution to Evolutionary Computation in Europe" in 2023. Since 2007, he has been listed as a top five (currently No. 4) world genetic programming researchers by the GP bibliography (http://www.cs.bham.ac.uk/~wbl/biblio/gp-html/index.html). <br/> <br/>
 
                               Prof Zhang is a past Chair of the IEEE CIS Intelligent Systems Applications Technical Committee, the IEEE CIS Emergent Technologies Technical Committee and the IEEE CIS Evolutionary Computation Technical Committee, a vice-chair of the IEEE CIS Task Force on Evolutionary Feature Selection and Construction, a vice-chair of the IEEE CIS Task Force on Evolutionary Computer Vision and Image Processing, and the founding chair of the IEEE Computational Intelligence Chapter in New Zealand.
                             </p>
@@ -225,7 +306,7 @@
                               <br><br>
 
                               <b>Bio:</b>
-                              Dr Dadong Wang is a Principal Research Scientist & the leader of the CSIRO Quantitative Imaging Research Team, part of the CSIRO Data61. He is recognised as a leader in developing revenue generating IP which is exemplified by the team’s license deal with a world leading imaging company, ranked Data61's No. 1 license in the top 10 licenses of CSIRO Data16 since 2017. He has been actively engaged with Australia's industry and is recognised as a CSIRO SME (Small and Medium Enterprises) champion. He is also recognised externally for his contributions to the industry. The joint team of Data61 (led by him) and an industry partner is the winner of NSW iAwards 2023 in Business and Industry Solution category, and the merit recipient of Technology Platform Solution category. The team is also the merit recipients of National iAwards 2023 in both the Business and Industry Solution and Technology Platform Solution categories. <br><br>
+                              Dr Dadong Wang is a Principal Research Scientist & the leader of the CSIRO Quantitative Imaging Research Team, part of the CSIRO Data61. He is recognised as a leader in developing revenue generating IP which is exemplified by the team's license deal with a world leading imaging company, ranked Data61's No. 1 license in the top 10 licenses of CSIRO Data16 since 2017. He has been actively engaged with Australia's industry and is recognised as a CSIRO SME (Small and Medium Enterprises) champion. He is also recognised externally for his contributions to the industry. The joint team of Data61 (led by him) and an industry partner is the winner of NSW iAwards 2023 in Business and Industry Solution category, and the merit recipient of Technology Platform Solution category. The team is also the merit recipients of National iAwards 2023 in both the Business and Industry Solution and Technology Platform Solution categories. <br><br>
 
                               He is also a Conjoint Professor at the University of New South Wales (UNSW) and an Adjunct Professor at the University of Technology, Sydney (UTS). Through these universities and the University of Sydney, he is a primary/joint PhD supervisor. Prior to joining the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in 2005, he had worked for two multinational companies for six years, developing large intelligent systems for infrastructure monitoring and control.
 
@@ -236,17 +317,19 @@
                   </div> -->
 
 
-                  <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
+              <h2
+                class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
+              </h2>
 
-                </div>
-              
-              </header>
-            </div>
-          </main>
-          <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
-            <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
-              <div class="flex flex-col py-2 px-6 lg:px-0">
-                <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
+          </div>
+
+          </header>
+      </div>
+      </main>
+      <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
+        <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
+          <div class="flex flex-col py-2 px-6 lg:px-0">
+            <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
                   <div>
                     <p class="mb-5 font-semibold font-headingStyle tracking-semiWide">Silver Sponsors</p>
                     <div class="flex flex-wrap gap-x-12">
@@ -270,7 +353,7 @@
                     </div>
                   </div>
                 </div> -->
-                <!-- <div class="mb-4 md:mb-6">
+            <!-- <div class="mb-4 md:mb-6">
                   <p class="mb-3 font-semibold font-headingStyle tracking-semiWide">Supported by</p>
                   <div class="flex flex-wrap items-center gap-x-12">
                     <a style="width:150px" class="mb-5 lg:mb-0 flex items-center" href="https://www.acm.org/" target="_blank" rel="noreferrer">
@@ -281,56 +364,57 @@
                     </a>
                   </div>
                 </div> -->
-              </div>
-              <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
-                <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra, Australia</small>
-                <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
-              </div>
-              <!-- <div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+            <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra,
+              Australia</small>
+            <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
+          </div>
+          <!-- <div>
                 <small>Image credit: <a href="https://commons.wikimedia.org/wiki/File:Brisbane_Sign_and_Skyline_of_Brisbane_CBD,_Queensland_in_Feb_2020.jpg">Kgbo</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</small>
               </div> -->
-              <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+          <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
                 <small class = "j_extra_pt">Website built by: <a href="https://github.com/JesseYang0528" style = "text-decoration: underline;">Hao Yang (Jesse Yang)</a>, <a href="https://github.com/bybeye" style = "text-decoration: underline;">Yingbin Bai (Edward Bai)</a></small>
               </div> -->
-            </div>
-          </footer>
         </div>
-      </div>
-      <div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true">
-      </div>
+      </footer>
     </div>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
-    </script>
-    <script>      
-          if(true) {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer && window.dataLayer.push(arguments);}
-            gtag('js', new Date());
+  </div>
+  <div id="gatsby-announcer"
+    style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
+    aria-live="assertive" aria-atomic="true">
+  </div>
+  </div>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
+  </script>
+  <script>
+    if (true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer && window.dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-            gtag('config', 'G-XSX58G49PD', {"send_page_view":false});
-          }
-    </script>
-    <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/";/*]]>*/</script>
-    <script id="gatsby-chunk-mapping">
-    /*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-1c9788fca0f90abb50c3.js"],"app":["/app-a59b4b6740a68aeefd26.js"],"component---src-pages-404-js":["/component---src-pages-404-js-3d51b459a80f969a4f66.js"],"component---src-pages-gather-town-js":["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"],"component---src-pages-index-js":["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"],"component---src-pages-organisation-js":["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"],"component---src-pages-phd-school-js":["/component---src-pages-phd-school-js-342a122469920c419385.js"],"component---src-pages-program-at-a-glance-js":["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"],"component---src-pages-program-js":["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"],"component---src-pages-sponsors-js":["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"],"component---src-templates-article-js":["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"]};/*]]>*/
-    </script>
-    <script>
-      function show_mobile_nav()
-      {
-        var current_class = document.getElementById('mobile_menu').className;
-        if (current_class == 'hidden')
-        {
-          document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
-          document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
-          document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
-        }
-        else
-        {
-          document.getElementById('mobile_menu').setAttribute('class', 'hidden');
-          document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
-          document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
-        }
+      gtag('config', 'G-XSX58G49PD', { "send_page_view": false });
+    }
+  </script>
+  <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/";/*]]>*/</script>
+  <script id="gatsby-chunk-mapping">
+    /*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-1c9788fca0f90abb50c3.js"], "app": ["/app-a59b4b6740a68aeefd26.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-3d51b459a80f969a4f66.js"], "component---src-pages-gather-town-js": ["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"], "component---src-pages-organisation-js": ["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"], "component---src-pages-phd-school-js": ["/component---src-pages-phd-school-js-342a122469920c419385.js"], "component---src-pages-program-at-a-glance-js": ["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"], "component---src-pages-program-js": ["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"], "component---src-pages-sponsors-js": ["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"], "component---src-templates-article-js": ["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"] };/*]]>*/
+  </script>
+  <script>
+    function show_mobile_nav() {
+      var current_class = document.getElementById('mobile_menu').className;
+      if (current_class == 'hidden') {
+        document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
+        document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
+        document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
       }
-    </script>
-  </body>
+      else {
+        document.getElementById('mobile_menu').setAttribute('class', 'hidden');
+        document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
+        document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
+      }
+    }
+  </script>
+</body>
+
 </html>
