@@ -61,334 +61,243 @@
         <main class="w-full">
           <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
             <header class="px-0 sm:px-7">
+              <style>
+                .schedule_table_title {
+                  background-color: #4b2e83;
+                  color: white;
+                  text-align: center;
+                }
+                .schedule_break_row {
+                  background-color: #f5f5f5;
+                }
+                .schedule_table_column_center {
+                  text-align: center;
+                  vertical-align: middle;
+                  padding: 12px 8px;
+                  border: 1px solid #e0e0e0;
+                  height: 40px;
+                  line-height: 1.2;
+                }
+                table {
+                  table-layout: fixed;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  border-radius: 8px;
+                  overflow: hidden;
+                  border-collapse: collapse;
+                  width: 100%;
+                }
+                .schedule_table_title td {
+                  padding: 15px 8px;
+                  font-weight: bold;
+                }
+                tr:hover:not(.schedule_table_title):not(.schedule_break_row) {
+                  background-color: #f8f8f8;
+                }
+                tr:nth-child(even):not(.schedule_table_title):not(.schedule_break_row) {
+                  background-color: #fafafa;
+                }
+              </style>
 
               <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Program overview</h2>
 
-              TBD
-
-              <!-- <img src="./imgs/time1.png" class="schedule_pic">
-              <br />
-              <img src="./imgs/time2.png" class="schedule_pic">
-              <br /><br /> -->
-
-              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Detailed program</h2>
-              <b>Conference program details to be determined.</b><br />
-              <table cellpadding='5' style="border-collapse: collapse;">
+              <table cellpadding='5' style="border-collapse: collapse; width: 100%;">
                 <tbody>
-                  <tr class='j_program_table_title_row'>
+                  <tr class='schedule_table_title'>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Time</td>
-                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="4"> AJCAI Tutorial &
-                      Workshop Day<br>(TBD)</td>
+                    <td class='schedule_table_column_center' style='font-size: larger;'>Nov. 30th</td>
+                    <td class='schedule_table_column_center' style='font-size: larger;'>Dec. 1st</td>
+                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="4">Dec. 2nd</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>8:30 - 9:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
+                  <tr>
+                    <td class='schedule_table_column_center'>08:00</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center' colspan="4">Registration</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>9:00 - 10: 00</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>08:30 - 09:00</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center' colspan="4">Morning Tea</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr>
+                    <td class='schedule_table_column_center'>09:00 - 10:00</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'>W1</td>
+                    <td class='schedule_table_column_center'>W2</td>
+                    <td class='schedule_table_column_center'>W3</td>
+                    <td class='schedule_table_column_center'>W4</td>
+                  </tr>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>10:00 - 10:15</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'></td>
                     <td class='schedule_table_column_center' colspan="4">Break</td>
                   </tr>
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>10:15 - 11:15</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'>W1</td>
+                    <td class='schedule_table_column_center'>W2</td>
+                    <td class='schedule_table_column_center'>W3</td>
+                    <td class='schedule_table_column_center'>W4</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>11:15 - 11:30</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
                   </tr>
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>11:30 - 12:30</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'>W1</td>
+                    <td class='schedule_table_column_center'>W2</td>
+                    <td class='schedule_table_column_center'>W3</td>
+                    <td class='schedule_table_column_center'>W4</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>12:30 - 14:00</td>
+                    <td class='schedule_table_column_center' rowspan="7">Registration</td>
+                    <td class='schedule_table_column_center' rowspan="7">Defence symposium</td>
                     <td class='schedule_table_column_center' colspan="4">Lunch</td>
                   </tr>
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>14:00 - 15:00</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
+                    <td class='schedule_table_column_center'>T1</td>
+                    <td class='schedule_table_column_center'>T2</td>
+                    <td class='schedule_table_column_center'>T3</td>
+                    <td class='schedule_table_column_center'>PhD Forum poster</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>15:00 - 15:10</td>
                     <td class='schedule_table_column_center' colspan="4">Break</td>
                   </tr>
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>15:10 - 16:00</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
-                    <td class='schedule_table_column_center'>TBD</td>
+                    <td class='schedule_table_column_center'>T1</td>
+                    <td class='schedule_table_column_center'>T2</td>
+                    <td class='schedule_table_column_center'>T3</td>
+                    <td class='schedule_table_column_center'>PhD Forum poster</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>16:00 - 16:10</td>
                     <td class='schedule_table_column_center' colspan="4">Break</td>
                   </tr>
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>16:10 - 17:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
-                  </tr>
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>17:00 - 21:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
+                    <td class='schedule_table_column_center' colspan="4">PhD Forum Panel</td>
                   </tr>
                 </tbody>
               </table>
 
+              <br/>
 
-              <table cellpadding='5' style="border-collapse: collapse;">
+              <table cellpadding='5' style="border-collapse: collapse; width: 100%;">
                 <tbody>
-                  <tr class='j_program_table_title_row'>
+                  <tr class='schedule_table_title'>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Time</td>
-                    <td class='schedule_table_column_center' style='font-size: larger; padding-bottom: 0px;'
-                      colspan="4"> AJCAI Main Conference Day 1<br>(TBD)</td>
+                    <td class='schedule_table_column_center' style='font-size: larger;'>Dec. 3rd</td>
+                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="2">Dec. 4th</td>
+                    <td class='schedule_table_column_center' style='font-size: larger;'>Dec. 5th</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>8:30 - 9:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
+                  <tr>
+                    <td class='schedule_table_column_center'>08:00</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center' colspan="2">Registration</td>
+                    <td class='schedule_table_column_center'></td>
                   </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>9:00 - 10: 00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>08:30 - 09:00</td>
+                    <td class='schedule_table_column_center'>Morning Tea</td>
+                    <td class='schedule_table_column_center' colspan="2"></td>
+                    <td class='schedule_table_column_center'>Morning Tea</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>10: 00 - 10:15</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                  <tr>
+                    <td class='schedule_table_column_center'>09:00 - 10:00</td>
+                    <td class='schedule_table_column_center'>Welcome (5 mins) + Keynote</td>
+                    <td class='schedule_table_column_center' colspan="2">Keynote [Industry and Government]</td>
+                    <td class='schedule_table_column_center'>Keynote</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row_1'>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>10:00 - 10:15</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center' colspan="2">Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                  </tr>
+                  <tr>
                     <td class='schedule_table_column_center'>10:15 - 11:15</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
+                    <td class='schedule_table_column_center'>Keynote</td>
+                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
+                    <td class='schedule_table_column_center'>Industry Day (+ AI for Health)</td>
+                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>11:15 - 11:30</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>11:30 - 12:30</td>
-                    <td class='schedule_table_column' colspan="4">TBD</td>
+                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
+                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
+                    <td class='schedule_table_column_center'>Industry Day</td>
+                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>12:30 - 14:00</td>
-                    <td class='schedule_table_column_center' colspan="4">Lunch</td>
+                    <td class='schedule_table_column_center'>Lunch</td>
+                    <td class='schedule_table_column_center'>Lunch</td>
+                    <td class='schedule_table_column_center'>Lunch</td>
+                    <td class='schedule_table_column_center'>Lunch</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>14:00 - 15:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
+                    <td class='schedule_table_column_center'>Keynote</td>
+                    <td class='schedule_table_column_center'>Keynote</td>
+                    <td class='schedule_table_column_center'>Keynote</td>
+                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>15:00 - 15:10</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>15:10 - 16:00</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
+                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
+                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
+                    <td class='schedule_table_column_center'>Industry Day</td>
+                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row'>
+                  <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>16:00 - 16:10</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
                   </tr>
-
-                  <tr class='j_price_table_content_row_1'>
+                  <tr>
                     <td class='schedule_table_column_center'>16:10 - 17:00</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
+                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
+                    <td class='schedule_table_column_center' colspan="2">Panel Discussion [AI Safety/Research Funding, TranslationARC] [finishes 17:30]</td>
+                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
                   </tr>
-                </tbody>
-              </table>
-
-
-
-
-
-              <table cellpadding='5' style="border-collapse: collapse;">
-                <tbody>
-                  <tr class='j_program_table_title_row'>
-                    <td class='schedule_table_column_center' style='font-size: larger;'>Time</td>
-                    <td class='schedule_table_column_center' style='font-size: larger; padding-bottom: 0px;'
-                      colspan="4"> AJCAI Main Conference Day 2<br>(TBD)</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>8:30 - 9:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>9:00 - 10: 00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>10: 00 - 10:15</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>10:15 - 11:15</td>
-                    <td class='schedule_table_column' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>11:15 - 11:30</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>11:30 - 12:30</td>
-                    <td class='schedule_table_column' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>12:30 - 14:00</td>
-                    <td class='schedule_table_column_center' colspan="4">Lunch</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>14:00 - 15:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>15:00 - 15:10</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>15:10 - 16:00</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>16:00 - 16:10</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>16:10 - 17:00</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>17:00 - 18:30</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>18:30 - 21:30</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <table cellpadding='5' style="border-collapse: collapse;">
-                <tbody>
-                  <tr class='j_program_table_title_row'>
-                    <td class='schedule_table_column_center' style='font-size: larger;'>Time</td>
-                    <td class='schedule_table_column_center' style='font-size: larger; padding-bottom: 0px;'
-                      colspan="4"> AJCAI Main Conference Day 3<br>(TBD)</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>8:30 - 9:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>9:00 - 10: 00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>10: 00 - 10:15</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>10:15 - 11:15</td>
-                    <td class='schedule_table_column' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>11:15 - 11:30</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>11:30 - 12:30</td>
-                    <td class='schedule_table_column' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>12:30 - 14:00</td>
-                    <td class='schedule_table_column_center' colspan="4">Lunch</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>14:00 - 15:00</td>
-                    <td class='schedule_table_column' colspan="4">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>15:00 - 15:10</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>15:10 - 16:00</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>16:00 - 16:10</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>16:10 - 16:50</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                    <td class='schedule_table_column' colspan="2">TBD</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>17:00 - 18:00</td>
-                    <td class='schedule_table_column_center' colspan="4">TBD</td>
+                  <tr>
+                    <td class='schedule_table_column_center'>17:00 - 21:30</td>
+                    <td class='schedule_table_column_center'>Reception</td>
+                    <td class='schedule_table_column_center' colspan="2">Banquet [starts at 6:30pm @ Old Parliament House] (conf info/stats; awards; thank yous - reviewers, etc)</td>
+                    <td class='schedule_table_column_center'>Closing, celebration</td>
                   </tr>
                 </tbody>
               </table>
